@@ -1,0 +1,54 @@
+.menu {
+    position: fixed;
+    bottom: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: #fff;
+    transition: .5s;
+
+    &.active-menu {
+        bottom: 0;
+        transition: .5s;
+    }
+
+    .links {
+
+        height: 100%;
+        @include flex(center, center);
+        flex-flow: column wrap;
+
+        div {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 7px auto;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                border-bottom: 2.5px solid #000;
+            }
+
+            &:hover::after {
+                width: 100%;
+                transition: .3s;
+            }
+
+        }
+    }
+}
+
+@media all and (min-width:720px) {
+    .menu .links div {
+        font-size: 1.8em;
+        margin: 10px auto;
+        letter-spacing: 1.5px;
+    }
+}

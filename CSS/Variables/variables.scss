@@ -1,0 +1,8 @@
+$main-color: #f7ca18;
+$additional: rgb(108, 122, 137);
+
+@mixin flex($jus, $ali) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $ali;
+}

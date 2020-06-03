@@ -1,0 +1,205 @@
+nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: blue;
+    @include flex(space-between, center);
+    padding: 7px 0px 7px 10px;
+    background-color: $main-color;
+
+    .logo {
+        width: 30px;
+        height: 30px;
+        background: #fff;
+    }
+
+    .higher-menu {
+        display: none;
+    }
+
+    .toggle {
+        width: 70px;
+        height: 45px;
+        cursor: pointer;
+        border: none;
+        border-radius: 0 0 0 30px;
+        position: relative;
+
+        span {
+            display: block;
+            width: 35px;
+            height: 5.3px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #000;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        span:nth-child(1) {
+            transform: translate(-50%, -50%) translateY(-12px);
+            transition: 0.3s;
+        }
+
+        span:nth-child(4) {
+            transform: translate(-50%, -50%) translateY(12px);
+            transition: 0.3s;
+        }
+
+    }
+
+
+    .toggle.active span:nth-child(1) {
+        transform: translate(-50%, -50%) translateY(-33px);
+        opacity: 0;
+    }
+
+    .toggle.active span:nth-child(4) {
+        transform: translate(-50%, -50%) translateY(33px);
+        opacity: 0;
+    }
+
+    .toggle.active span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition-delay: 0.2s;
+
+    }
+
+    .toggle.active span:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition-delay: 0.2s;
+
+    }
+
+}
+
+.first {
+    background-color: $main-color;
+    padding: 250px 30px 200px 30px;
+    text-transform: uppercase;
+    position: relative;
+
+
+    .text {
+        border-left: 3px solid #fff;
+        padding-left: 20px;
+        position: relative;
+
+
+        h1 {
+            width: 60%;
+            font-size: 2.4em;
+            margin: 0;
+        }
+
+        h2 {
+            width: 70%;
+            margin-top: 10px;
+            font-weight: 300;
+
+        }
+    }
+
+    .icon {
+        color: #fff;
+        font-size: 2.5em;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+        cursor: pointer;
+        animation: icon 1.5s ease-out infinite;
+    }
+
+}
+
+
+@keyframes icon {
+    0% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-22px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media all and (min-width:1000px) {
+    nav {
+        .toggle {
+            display: none;
+
+        }
+
+        .higher-menu {
+            display: flex;
+
+
+            .links {
+                @include flex(space-around, center);
+                margin: 10px 20px 10px auto;
+
+
+                a {
+                    margin: 5px 30px;
+                    font-weight: bold;
+                    font-size: 1.3em;
+
+                    div {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 100%;
+                            border-bottom: 2px solid #000;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                            transition: .3s;
+                        }
+                    }
+                }
+
+                .active div::after {
+                    width: 100%;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .first {
+        .text {
+
+
+            h1 {
+                width: 80%;
+                font-size: 4em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+
+        .icon {
+            font-size: 3.5em;
+            margin-bottom: -75px;
+        }
+    }
+}

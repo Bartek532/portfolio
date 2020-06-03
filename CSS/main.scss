@@ -1,0 +1,51 @@
+@import './Variables/variables';
+@import './Start/start';
+@import './Menu/menu';
+@import './About/about';
+@import './Skills/skills';
+@import './Projects/projects';
+@import './Contact/contact';
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:focus {
+    outline: 0 none;
+}
+
+svg {
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+section {
+    padding: 50px 0;
+}
+
+footer {
+    padding-top: 40px;
+}

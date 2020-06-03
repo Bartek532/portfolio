@@ -1,0 +1,228 @@
+.fourth {
+    @include flex(center, center);
+    flex-flow: column wrap;
+    padding-bottom: 30px;
+
+    .header {
+        margin: 10px auto;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            background-color: $main-color;
+            z-index: -1;
+            color: #fff;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.7em;
+            margin: 0;
+        }
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+
+        .project {
+            width: 75vw;
+            min-height: 75vw;
+            justify-self: center;
+            margin: 30px;
+            position: relative;
+
+            &::after,
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                z-index: -5;
+            }
+
+            &:hover::after {
+                top: -10px;
+                left: 10px;
+                transition: .4s;
+                background: rgba(247, 202, 24, 0.7);
+            }
+
+            &:hover::before {
+                top: -20px;
+                left: 20px;
+                transition: .4s;
+                background: rgba(247, 202, 24, 0.5);
+            }
+
+            &:hover .description {
+                opacity: 1;
+                transition: .3s;
+            }
+
+            .image {
+                position: absolute;
+                background: url("../Gallery/front-image.jpg");
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .incentive {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                color: #fff;
+                font-size: 1em;
+                z-index: 1;
+                text-align: center;
+            }
+
+            .description {
+                position: absolute;
+                background: $main-color;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 2;
+                opacity: 0;
+                min-height: 100%;
+                padding: 10px 7px;
+
+                h3 {
+                    text-align: center;
+                    margin: 20px 10px;
+                    font-size: 1.3em;
+                    border-left: 2px solid #fff;
+                }
+
+                .technologies {
+                    margin-left: 10px;
+                    padding-left: 15px;
+                    border-left: 2px solid #fff;
+
+                    ul {
+                        padding-left: 25px;
+                        margin-top: 8px;
+                        list-style-image: url('../../Gallery/list.png');
+
+
+                    }
+                }
+
+                .buttons {
+                    width: 100%;
+                    @include flex(center, center);
+                    margin-top: 30px;
+
+                    button {
+                        border: 0 none;
+                        background: #fff;
+                        padding: 10px 30px;
+                        border-radius: 5px;
+                        margin: 0 10px;
+                        border: 2px solid #fff;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 0.8em;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: $main-color;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (min-width:500px) {
+    .fourth {
+        .header {
+            margin: 20px;
+
+            h2 {
+                font-size: 2.35em;
+
+            }
+        }
+
+        .projects {
+
+            .project {
+                width: 350px;
+                min-height: 350px;
+                font-size: 1.3em;
+
+                .description .buttons {
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 0 30px 0 20px;
+                    @include flex(space-around, center);
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media all and (min-width:850px) {
+    .fourth {
+
+        .projects {
+            grid-template-columns: 1fr 1fr;
+
+            .project {
+                width: 300px;
+                min-height: 300px;
+                font-size: 1em;
+            }
+        }
+
+
+    }
+}
+
+
+
+@media all and (min-width:1150px) {
+    .fourth .projects {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 40px;
+
+    }
+}
+
+@media all and (min-width:1365px) {
+    .fourth {
+        .header {
+            margin: 20px;
+
+            h2 {
+                font-size: 2.35em;
+
+            }
+        }
+
+
+    }
+}
