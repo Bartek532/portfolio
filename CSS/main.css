@@ -244,16 +244,16 @@ nav .toggle.active span:nth-child(3) {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 10px 20px 10px auto;
+    margin: 5px 20px 5px auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
   }
   nav .menu .links a {
-    margin: 5px 30px;
+    margin: 5px 27px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.1em;
     position: relative;
   }
   nav .menu .links a::after {
