@@ -1,6 +1,6 @@
 @import './Variables/variables';
-@import './Start/start';
 @import './Menu/menu';
+@import './Start/start';
 @import './About/about';
 @import './Skills/skills';
 @import './Projects/projects';
@@ -19,8 +19,11 @@ body {
 
 }
 
-.stop-scrolling {
-    overflow: hidden;
+@media (hover: none) and (pointer: coarse) {
+    .stop-scrolling {
+        overflow: hidden;
+    }
+
 }
 
 * {

@@ -1,15 +1,15 @@
 .menu {
     position: fixed;
-    bottom: 100vh;
-    left: 0;
+    top: 0;
+    right: 100vw;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: -1;
     background: #fff;
     transition: .5s;
 
     &.active-menu {
-        bottom: 0;
+        right: 0;
         transition: .5s;
     }
 
@@ -19,7 +19,7 @@
         @include flex(center, center);
         flex-flow: column wrap;
 
-        div {
+        a {
             font-size: 1.5em;
             font-weight: bold;
             text-transform: uppercase;
@@ -46,7 +46,7 @@
 }
 
 @media all and (min-width:720px) {
-    .menu .links div {
+    .menu .links a {
         font-size: 1.8em;
         margin: 10px auto;
         letter-spacing: 1.5px;

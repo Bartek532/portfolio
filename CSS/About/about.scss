@@ -4,7 +4,7 @@
     flex-flow: column wrap;
 
     .header {
-        margin: 40px auto 50px auto;
+        margin: 50px auto 50px auto;
         position: relative;
 
         &::after {
@@ -21,7 +21,7 @@
 
         h2 {
             text-transform: uppercase;
-            font-size: 1.7em;
+            font-size: 2.1rem;
             margin: 0;
         }
     }
@@ -73,10 +73,6 @@
 }
 
 @media all and (max-width:500px) {
-    .second .info .image {
-        width: 90%;
-        height: 350px;
-    }
 
     .second .info .description {
         width: 100%;
@@ -86,7 +82,7 @@
 @media all and (min-width:600px) {
     .second .header {
         h2 {
-            font-size: 2.2em;
+            font-size: 2.5rem;
         }
     }
 }
@@ -94,13 +90,6 @@
 @media all and (min-width:824px) {
     .second {
         margin-top: 0px;
-
-
-        .header {
-            h2 {
-                font-size: 1.9em;
-            }
-        }
 
         .info {
             flex-flow: row nowrap;
@@ -117,10 +106,6 @@
 
 @media all and (min-width:1000px) {
 
-    .second .header h2 {
-        font-size: 2.1em;
-    }
-
     .second .info .description {
         width: 45%;
     }
@@ -130,10 +115,6 @@
 @media all and (min-width:1365px) {
     .second {
         margin-top: -70px;
-
-        .header h2 {
-            font-size: 2.5em;
-        }
     }
 
     .second .info .description {

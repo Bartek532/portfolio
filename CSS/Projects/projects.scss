@@ -4,7 +4,7 @@
     padding-bottom: 30px;
 
     .header {
-        margin: 10px auto;
+        margin: 30px auto;
         position: relative;
 
         &::after {
@@ -21,7 +21,7 @@
 
         h2 {
             text-transform: uppercase;
-            font-size: 1.7em;
+            font-size: 2.1rem;
             margin: 0;
         }
     }
@@ -150,13 +150,13 @@
 }
 
 
-@media all and (min-width:500px) {
+@media all and (min-width:600px) {
     .fourth {
         .header {
             margin: 20px;
 
             h2 {
-                font-size: 2.35em;
+                font-size: 2.5rem;
 
             }
         }
@@ -216,13 +216,6 @@
     .fourth {
         .header {
             margin: 20px;
-
-            h2 {
-                font-size: 2.35em;
-
-            }
         }
-
-
     }
 }

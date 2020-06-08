@@ -1,10 +1,76 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu.active-menu {
+  right: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu .links {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.menu .links a {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 7px auto;
+  position: relative;
+}
+
+.menu .links a::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-bottom: 2.5px solid #000;
+}
+
+.menu .links a:hover::after {
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media all and (min-width: 720px) {
+  .menu .links a {
+    font-size: 1.8em;
+    margin: 10px auto;
+    letter-spacing: 1.5px;
+  }
+}
+
 nav {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
-  background: blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,10 +88,6 @@ nav .logo {
   width: 30px;
   height: 30px;
   background: #fff;
-}
-
-nav .higher-menu {
-  display: none;
 }
 
 nav .toggle {
@@ -165,12 +227,15 @@ nav .toggle.active span:nth-child(3) {
   nav .toggle {
     display: none;
   }
-  nav .higher-menu {
+  nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
+    position: static;
+    background: transparent;
   }
-  nav .higher-menu .links {
+  nav .menu .links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -180,16 +245,18 @@ nav .toggle.active span:nth-child(3) {
         -ms-flex-align: center;
             align-items: center;
     margin: 10px 20px 10px auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
   }
-  nav .higher-menu .links a {
+  nav .menu .links a {
     margin: 5px 30px;
     font-weight: bold;
     font-size: 1.3em;
-  }
-  nav .higher-menu .links a div {
     position: relative;
   }
-  nav .higher-menu .links a div::after {
+  nav .menu .links a::after {
     position: absolute;
     content: '';
     top: 0;
@@ -198,12 +265,12 @@ nav .toggle.active span:nth-child(3) {
     height: 100%;
     border-bottom: 2px solid #000;
   }
-  nav .higher-menu .links a div:hover::after {
+  nav .menu .links a:hover::after {
     width: 100%;
     -webkit-transition: .3s;
     transition: .3s;
   }
-  nav .higher-menu .links .active div::after {
+  nav .menu .links .active::after {
     width: 100%;
     -webkit-transition: .3s;
     transition: .3s;
@@ -218,73 +285,6 @@ nav .toggle.active span:nth-child(3) {
   .first .icon {
     font-size: 3.5em;
     margin-bottom: -75px;
-  }
-}
-
-.menu {
-  position: fixed;
-  bottom: 100vh;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  background: #fff;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.menu.active-menu {
-  bottom: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.menu .links {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
-.menu .links div {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 7px auto;
-  position: relative;
-}
-
-.menu .links div::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  border-bottom: 2.5px solid #000;
-}
-
-.menu .links div:hover::after {
-  width: 100%;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-@media all and (min-width: 720px) {
-  .menu .links div {
-    font-size: 1.8em;
-    margin: 10px auto;
-    letter-spacing: 1.5px;
   }
 }
 
@@ -306,7 +306,7 @@ nav .toggle.active span:nth-child(3) {
 }
 
 .second .header {
-  margin: 40px auto 50px auto;
+  margin: 50px auto 50px auto;
   position: relative;
 }
 
@@ -324,7 +324,7 @@ nav .toggle.active span:nth-child(3) {
 
 .second .header h2 {
   text-transform: uppercase;
-  font-size: 1.7em;
+  font-size: 2.1rem;
   margin: 0;
 }
 
@@ -384,10 +384,6 @@ nav .toggle.active span:nth-child(3) {
 }
 
 @media all and (max-width: 500px) {
-  .second .info .image {
-    width: 90%;
-    height: 350px;
-  }
   .second .info .description {
     width: 100%;
   }
@@ -395,16 +391,13 @@ nav .toggle.active span:nth-child(3) {
 
 @media all and (min-width: 600px) {
   .second .header h2 {
-    font-size: 2.2em;
+    font-size: 2.5rem;
   }
 }
 
 @media all and (min-width: 824px) {
   .second {
     margin-top: 0px;
-  }
-  .second .header h2 {
-    font-size: 1.9em;
   }
   .second .info {
     -webkit-box-orient: horizontal;
@@ -420,9 +413,6 @@ nav .toggle.active span:nth-child(3) {
 }
 
 @media all and (min-width: 1000px) {
-  .second .header h2 {
-    font-size: 2.1em;
-  }
   .second .info .description {
     width: 45%;
   }
@@ -431,9 +421,6 @@ nav .toggle.active span:nth-child(3) {
 @media all and (min-width: 1365px) {
   .second {
     margin-top: -70px;
-  }
-  .second .header h2 {
-    font-size: 2.5em;
   }
   .second .info .description {
     font-size: 1.1em;
@@ -458,7 +445,7 @@ nav .toggle.active span:nth-child(3) {
 }
 
 .third .header {
-  margin: 0 auto 50px auto;
+  margin: 50px auto;
   position: relative;
 }
 
@@ -476,7 +463,7 @@ nav .toggle.active span:nth-child(3) {
 .third .header h2 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.7em;
+  font-size: 2.1rem;
   z-index: 3;
   position: relative;
   margin: 0;
@@ -501,7 +488,7 @@ nav .toggle.active span:nth-child(3) {
 .third .info #grid {
   position: relative;
   width: 78%;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0;
 }
 
@@ -611,7 +598,8 @@ nav .toggle.active span:nth-child(3) {
 
 .third .info .desc {
   margin: 60px 30px 10px 30px;
-  padding: 10px 20px 20px 30px;
+  padding: 10px 30px;
+  max-width: 90%;
   text-align: center;
   background: #fff;
   position: relative;
@@ -620,7 +608,7 @@ nav .toggle.active span:nth-child(3) {
 .third .info .desc::after {
   position: absolute;
   top: -10px;
-  left: -10px;
+  left: 10px;
   content: '';
   width: 100%;
   height: 100%;
@@ -628,25 +616,13 @@ nav .toggle.active span:nth-child(3) {
   z-index: -1;
 }
 
-.third .info .desc::before {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  z-index: -2;
-}
-
 @media all and (min-width: 600px) {
   .third .info #grid {
     font-size: 1.4em;
     width: 60vw;
   }
-  .third .header {
-    font-size: 1.5em;
-    margin-bottom: 50px;
+  .third .header h2 {
+    font-size: 2.5rem;
   }
   .third .info .desc {
     width: 50vw;
@@ -656,10 +632,6 @@ nav .toggle.active span:nth-child(3) {
 }
 
 @media all and (min-width: 1000px) {
-  .third .header {
-    font-size: 1.5em;
-    margin: 30px auto 60px auto;
-  }
   .third .info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -680,13 +652,25 @@ nav .toggle.active span:nth-child(3) {
     width: 35vw;
   }
   .third .info .desc {
-    margin-right: 100px;
+    margin-right: 140px;
     font-size: 1.1em;
     padding: 40px;
     width: 35vw;
   }
   .third .info .desc h3 {
     font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 1365px) {
+  .third .info .desc {
+    margin-right: 180px;
+  }
+}
+
+@media all and (min-width: 1865px) {
+  .third .info #grid {
+    font-size: 2em;
   }
 }
 
@@ -708,7 +692,7 @@ nav .toggle.active span:nth-child(3) {
 }
 
 .fourth .header {
-  margin: 10px auto;
+  margin: 30px auto;
   position: relative;
 }
 
@@ -726,7 +710,7 @@ nav .toggle.active span:nth-child(3) {
 
 .fourth .header h2 {
   text-transform: uppercase;
-  font-size: 1.7em;
+  font-size: 2.1rem;
   margin: 0;
 }
 
@@ -864,12 +848,12 @@ nav .toggle.active span:nth-child(3) {
   transition: .3s;
 }
 
-@media all and (min-width: 500px) {
+@media all and (min-width: 600px) {
   .fourth .header {
     margin: 20px;
   }
   .fourth .header h2 {
-    font-size: 2.35em;
+    font-size: 2.5rem;
   }
   .fourth .projects .project {
     width: 350px;
@@ -918,9 +902,6 @@ nav .toggle.active span:nth-child(3) {
   .fourth .header {
     margin: 20px;
   }
-  .fourth .header h2 {
-    font-size: 2.35em;
-  }
 }
 
 .fifth {
@@ -959,7 +940,7 @@ nav .toggle.active span:nth-child(3) {
 
 .fifth .header h2 {
   text-transform: uppercase;
-  font-size: 1.7em;
+  font-size: 2.1rem;
   margin: 0;
   position: relative;
   z-index: 3;
@@ -1043,8 +1024,6 @@ nav .toggle.active span:nth-child(3) {
 .fifth .info .form .inputs label input:focus,
 .fifth .info .form .inputs label textarea:focus {
   border-bottom: 2px solid #000;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .fifth .info .form .inputs label textarea {
@@ -1185,11 +1164,13 @@ nav .toggle.active span:nth-child(3) {
   }
 }
 
-@media all and (min-width: 860px) {
-  .fifth .header {
-    font-size: 1.4em;
-    margin-top: 30px;
+@media all and (min-width: 600px) {
+  .fifth .header h2 {
+    font-size: 2.5rem;
   }
+}
+
+@media all and (min-width: 860px) {
   .fifth .info .socials {
     margin-bottom: 20px;
     margin-top: 40px;
@@ -1224,13 +1205,6 @@ nav .toggle.active span:nth-child(3) {
   }
 }
 
-@-moz-document url-prefix() {
-  .fifth .info .form .inputs label input,
-  .fifth .info .form .inputs label textarea {
-    margin: 10px;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -1241,8 +1215,10 @@ body {
   overflow-x: hidden;
 }
 
-.stop-scrolling {
-  overflow: hidden;
+@media (hover: none) and (pointer: coarse) {
+  .stop-scrolling {
+    overflow: hidden;
+  }
 }
 
 * {

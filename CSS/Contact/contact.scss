@@ -21,7 +21,7 @@
 
         h2 {
             text-transform: uppercase;
-            font-size: 1.7em;
+            font-size: 2.1rem;
             margin: 0;
             position: relative;
             z-index: 3;
@@ -60,7 +60,6 @@
 
                         &:focus {
                             border-bottom: 2px solid #000;
-                            transition: .3s;
                         }
                     }
 
@@ -180,13 +179,14 @@
     }
 }
 
+@media all and (min-width:600px) {
+    .fifth .header h2 {
+        font-size: 2.5rem;
+    }
+}
+
 @media all and (min-width:860px) {
     .fifth {
-        .header {
-            font-size: 1.4em;
-            margin-top: 30px;
-        }
-
         .info .socials {
             margin-bottom: 20px;
             margin-top: 40px;
@@ -230,16 +230,6 @@
             .socials {
                 width: 46%;
             }
-        }
-    }
-}
-
-@-moz-document url-prefix() {
-    .fifth .info .form .inputs label {
-
-        input,
-        textarea {
-            margin: 10px;
         }
     }
 }

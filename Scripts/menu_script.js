@@ -14,10 +14,25 @@ for (const link of links) {
     link.addEventListener("click", () => {
         document.querySelector('.toggle').classList.toggle('active');
         document.querySelector('.menu').classList.toggle('active-menu');
-        document.body.classList.toggle("stop-scrolling");
-
+        if (window.innerWidth < 1000) {
+            document.body.classList.toggle("stop-scrolling");
+        }
     })
 }
+
+//typing effect
+let i = 0;
+let text = "bartosz zagrodzki";
+let speed = 130;
+
+function typer() {
+    if (i < text.length) {
+        document.querySelector('.first .text h1').innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typer, speed);
+    }
+}
+typer();
 
 //skills
 
