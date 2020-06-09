@@ -6,3 +6,48 @@ $additional: rgb(108, 122, 137);
     justify-content: $jus;
     align-items: $ali;
 }
+
+@mixin pseudo($width, $top, $left, $background:transparent, $index:1) {
+    position: absolute;
+    content: '';
+    top: $top;
+    left: $left;
+    width: $width;
+    height: 100%;
+    background: $background;
+    z-index: $index;
+
+}
+
+//animations
+
+@keyframes icon {
+    0% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-22px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes social {
+    0% {
+        top: 123%;
+        left: -180%;
+    }
+
+    75% {
+        top: -123%;
+        left: 20%;
+    }
+
+    100% {
+        top: -10%;
+        left: -50%;
+    }
+}

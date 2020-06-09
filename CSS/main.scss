@@ -19,12 +19,11 @@ body {
 
 }
 
-@media (hover: none) and (pointer: coarse) {
-    .stop-scrolling {
-        overflow: hidden;
-    }
 
+.stop-scrolling {
+    overflow: hidden;
 }
+
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -51,4 +50,20 @@ section {
 
 footer {
     padding-top: 40px;
+}
+
+
+@media all and (min-width:600px) {
+
+    .first,
+    .second,
+    .third,
+    .fourth,
+    .fifth {
+        .header {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
 }

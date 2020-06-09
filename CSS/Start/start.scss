@@ -101,7 +101,6 @@ nav {
     }
 
     .icon {
-        color: #fff;
         font-size: 2.5em;
         position: absolute;
         bottom: 20px;
@@ -109,26 +108,18 @@ nav {
         width: 100%;
         text-align: center;
         z-index: 3;
-        cursor: pointer;
         animation: icon 1.5s ease-out infinite;
+
+        a {
+            color: #fff;
+            cursor: pointer;
+        }
     }
 
 }
 
 
-@keyframes icon {
-    0% {
-        transform: translateY(0);
-    }
 
-    60% {
-        transform: translateY(-22px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 @media all and (min-width:1000px) {
     nav {
@@ -155,12 +146,7 @@ nav {
                     position: relative;
 
                     &::after {
-                        position: absolute;
-                        content: '';
-                        top: 0;
-                        left: 0;
-                        width: 0%;
-                        height: 100%;
+                        @include pseudo(0%, 0, 0);
                         border-bottom: 2px solid #000;
                     }
 

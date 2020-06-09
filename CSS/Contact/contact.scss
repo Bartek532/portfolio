@@ -8,15 +8,7 @@
         position: relative;
 
         &::after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 100%;
-            top: 0;
-            left: 50%;
-            background-color: #fff;
-            z-index: 1;
-            color: #fff;
+            @include pseudo(60%, 0, 50%, #fff, 1);
         }
 
         h2 {
@@ -109,15 +101,9 @@
                 color: #fff;
 
                 &::after {
-                    position: absolute;
-                    top: 123%;
-                    left: -150%;
-                    width: 200%;
+                    @include pseudo(200%, 123%, -150%, #fff, -2);
                     height: 160%;
-                    content: '';
-                    z-index: -2;
                     transform: rotate(-57deg);
-                    background: #fff;
                 }
 
                 &:hover::after {
@@ -162,28 +148,9 @@
     }
 }
 
-@keyframes social {
-    0% {
-        top: 123%;
-        left: -180%;
-    }
 
-    75% {
-        top: -123%;
-        left: 20%;
-    }
 
-    100% {
-        top: -10%;
-        left: -50%;
-    }
-}
 
-@media all and (min-width:600px) {
-    .fifth .header h2 {
-        font-size: 2.5rem;
-    }
-}
 
 @media all and (min-width:860px) {
     .fifth {

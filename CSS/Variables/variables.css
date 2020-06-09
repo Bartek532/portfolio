@@ -1,1 +1,60 @@
-/* No CSS *//*# sourceMappingURL=variables.css.map */
+@-webkit-keyframes icon {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-22px);
+            transform: translateY(-22px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes icon {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-22px);
+            transform: translateY(-22px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes social {
+  0% {
+    top: 123%;
+    left: -180%;
+  }
+  75% {
+    top: -123%;
+    left: 20%;
+  }
+  100% {
+    top: -10%;
+    left: -50%;
+  }
+}
+
+@keyframes social {
+  0% {
+    top: 123%;
+    left: -180%;
+  }
+  75% {
+    top: -123%;
+    left: 20%;
+  }
+  100% {
+    top: -10%;
+    left: -50%;
+  }
+}
+/*# sourceMappingURL=variables.css.map */

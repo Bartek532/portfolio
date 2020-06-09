@@ -27,12 +27,7 @@
             position: relative;
 
             &::after {
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                width: 0%;
-                height: 100%;
+                @include pseudo(0%, 0, 0);
                 border-bottom: 2.5px solid #000;
             }
 
