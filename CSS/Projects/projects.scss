@@ -1,4 +1,4 @@
-.fourth {
+.work {
     @include flex(center, center);
     flex-flow: column wrap;
     padding-bottom: 30px;
@@ -11,7 +11,7 @@
             @include pseudo(60%, 0, 50%, $main-color, -1);
         }
 
-        h2 {
+        &__title {
             text-transform: uppercase;
             font-size: 2.1rem;
             margin: 0;
@@ -29,6 +29,34 @@
             justify-self: center;
             margin: 30px;
             position: relative;
+
+            &:first-child .project__image {
+                background-image: url('../../Gallery/projekt1.PNG');
+            }
+
+            &:nth-child(2) .project__image {
+                background-image: url('../../Gallery/projekt2.PNG');
+            }
+
+            &:nth-child(3) .project__image {
+                background-image: url('../../Gallery/projekt3.PNG');
+            }
+
+            &:nth-child(4) .project__image {
+                background-image: url('../../Gallery/projekt4.PNG');
+            }
+
+            &:nth-child(4) .project__incentive {
+                color: #fff;
+            }
+
+            &:nth-child(5) .project__image {
+                background-image: url('../../Gallery/projekt5.PNG');
+            }
+
+            &:nth-child(6) .project__image {
+                background-image: url('../../Gallery/projekt6.PNG');
+            }
 
             &::after,
             &::before {
@@ -49,38 +77,48 @@
                 background: rgba(247, 202, 24, 0.5);
             }
 
-            &:hover .description {
+            &:hover .project__description {
                 opacity: 1;
                 transition: .3s;
             }
 
-            .image {
-                @include pseudo(100%, 0, 0, url("../Gallery/front-image.jpg"), 1);
+            &__image {
+                @include pseudo(100%, 0, 0);
+                background-position: center center;
+                background-size: cover;
             }
 
-            .incentive {
+
+
+            &__incentive {
                 @include pseudo(100%, auto, 0);
                 height: 10%;
                 bottom: 0;
-                color: #fff;
+                color: #000;
                 font-size: 1em;
                 text-align: center;
             }
 
-            .description {
-                @include pseudo(100%, 0, 0, $main-color, 2);
+            &__description {
+                position: absolute;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: $main-color;
                 opacity: 0;
                 min-height: 100%;
                 padding: 10px 7px;
 
-                h3 {
+                &__title {
                     text-align: center;
                     margin: 20px 10px;
                     font-size: 1.3em;
                     border-left: 2px solid #fff;
                 }
 
-                .technologies {
+                &__technologies {
                     margin-left: 10px;
                     padding-left: 15px;
                     border-left: 2px solid #fff;
@@ -89,12 +127,10 @@
                         padding-left: 25px;
                         margin-top: 8px;
                         list-style-image: url('../../Gallery/list.png');
-
-
                     }
                 }
 
-                .buttons {
+                &__buttons {
                     width: 100%;
                     @include flex(center, center);
                     margin-top: 30px;
@@ -124,7 +160,7 @@
 
 
 @media all and (min-width:600px) {
-    .fourth {
+    .work {
         .header {
             margin: 20px;
         }
@@ -136,7 +172,7 @@
                 min-height: 350px;
                 font-size: 1.3em;
 
-                .description .buttons {
+                .project__description .project__description__buttons {
                     position: absolute;
                     bottom: 30px;
                     padding: 0 30px 0 20px;
@@ -154,7 +190,7 @@
 }
 
 @media all and (min-width:850px) {
-    .fourth {
+    .work {
 
         .projects {
             grid-template-columns: 1fr 1fr;
@@ -173,7 +209,7 @@
 
 
 @media all and (min-width:1150px) {
-    .fourth .projects {
+    .work .projects {
         grid-template-columns: 1fr 1fr 1fr;
         padding-bottom: 40px;
 
@@ -181,7 +217,7 @@
 }
 
 @media all and (min-width:1365px) {
-    .fourth {
+    .work {
         .header {
             margin: 20px;
         }

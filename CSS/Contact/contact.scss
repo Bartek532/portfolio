@@ -1,202 +1,194 @@
-.fifth {
-    background: $main-color;
-    @include flex(center, center);
-    flex-flow: column wrap;
+.contact {
+	background: $main-color;
+	@include flex(center, center);
+	flex-flow: column wrap;
+	padding-bottom: 10px;
 
-    .header {
-        margin: 10px auto 20px auto;
-        position: relative;
+	.header {
+		margin: 10px auto 20px auto;
+		position: relative;
 
-        &::after {
-            @include pseudo(60%, 0, 50%, #fff, 1);
-        }
+		&::after {
+			@include pseudo(60%, 0, 50%, #fff, 1);
+		}
 
-        h2 {
-            text-transform: uppercase;
-            font-size: 2.1rem;
-            margin: 0;
-            position: relative;
-            z-index: 3;
-        }
-    }
+		&__title {
+			text-transform: uppercase;
+			font-size: 2.1rem;
+			margin: 0;
+			position: relative;
+			z-index: 3;
+		}
+	}
 
-    .info {
-        @include flex(center, center);
-        flex-flow: column wrap;
-        width: 100%;
+	.info {
+		@include flex(center, center);
+		flex-flow: column wrap;
+		width: 100%;
 
-        .form {
-            @include flex(center, center);
-            flex-flow: column wrap;
-            width: 100%;
+		&__form {
+			@include flex(center, center);
+			flex-flow: column wrap;
+			width: 100%;
 
-            .inputs {
-                @include flex(center, center);
-                flex-flow: column wrap;
-                margin-top: 30px;
-                width: 100%;
-                font-family: 'Montserrat', sans-serif;
+			&__inputs {
+				@include flex(center, center);
+				flex-flow: column wrap;
+				margin-top: 30px;
+				width: 100%;
+				font-family: 'Montserrat', sans-serif;
 
-                label {
-                    width: 100%;
-                    @include flex(center, center);
+				&__label {
+					width: 100%;
+					@include flex(center, center);
 
-                    input,
-                    textarea {
-                        border: 0 none;
-                        width: 80%;
-                        margin: 7px;
-                        padding: 10px;
-                        text-transform: uppercase;
+					input,
+					textarea {
+						border: 0 none;
+						width: 80%;
+						margin: 7px;
+						padding: 10px;
+						text-transform: uppercase;
 
+						&:focus {
+							border-bottom: 2px solid #000;
+						}
+					}
 
-                        &:focus {
-                            border-bottom: 2px solid #000;
-                        }
-                    }
+					textarea {
+						height: 100px;
+					}
 
-                    textarea {
-                        height: 100px;
-                    }
+					.--error {
+						border-bottom: 2px solid red;
+					}
+				}
+			}
 
-                    .error {
-                        border-bottom: 2px solid red;
-                    }
-                }
-            }
+			&__reset {
+				padding: 6px 35px;
+				background: #fff;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: 2px solid #fff;
+				margin: 30px;
+				cursor: pointer;
 
-            button {
-                padding: 6px 35px;
-                background: #fff;
-                text-transform: uppercase;
-                font-weight: bold;
-                border: 2px solid #fff;
-                margin: 30px;
-                cursor: pointer;
+				&:hover {
+					background: $main-color;
+					transition: 0.3s ease-out;
+				}
+			}
+		}
 
-                &:hover {
-                    background: $main-color;
-                    transition: .3s ease-out;
-                }
-            }
+		&__socials {
+			width: 100%;
+			padding: 20px 30px;
+			@include flex(space-around, center);
 
+			&__social {
+				width: 54px;
+				height: 54px;
+				font-size: 1.7em;
+				border-radius: 10px;
+				@include flex(center, center);
+				position: relative;
+				z-index: 2;
+				overflow: hidden;
+				cursor: pointer;
+				color: #fff;
 
-        }
+				&::after {
+					@include pseudo(200%, 123%, -150%, #fff, -2);
+					height: 160%;
+					transform: rotate(-57deg);
+				}
 
-        .socials {
-            width: 100%;
-            padding: 20px 30px;
-            @include flex(space-around, center);
+				&:hover::after {
+					animation: social 0.7s ease-in-out both;
+				}
+			}
 
-            div {
-                width: 54px;
-                height: 54px;
-                font-size: 1.7em;
-                border-radius: 10px;
-                @include flex(center, center);
-                position: relative;
-                z-index: 2;
-                overflow: hidden;
-                cursor: pointer;
-                color: #fff;
+			&__facebook {
+				background-color: #4267b2;
 
-                &::after {
-                    @include pseudo(200%, 123%, -150%, #fff, -2);
-                    height: 160%;
-                    transform: rotate(-57deg);
-                }
+				&:hover {
+					color: #4267b2;
+				}
+			}
 
-                &:hover::after {
-                    animation: social .7s ease-in-out both;
-                }
+			&__twitter {
+				background-color: #1da0f1;
 
+				&:hover {
+					color: #1da0f1;
+				}
+			}
 
-            }
+			&__instagram {
+				background-color: #b43e88;
 
-            .facebook {
-                background-color: #4267B2;
+				&:hover {
+					color: #b43e88;
+				}
+			}
 
-                &:hover {
-                    color: #4267B2;
-                }
-            }
+			&__google {
+				background-color: #eb4336;
 
-            .twitter {
-                background-color: #1DA0F1;
-
-                &:hover {
-                    color: #1DA0F1;
-                }
-            }
-
-            .instagram {
-                background-color: #B43E88;
-
-                &:hover {
-                    color: #B43E88;
-                }
-            }
-
-            .google {
-                background-color: #EB4336;
-
-                &:hover {
-                    color: #EB4336;
-                }
-            }
-        }
-    }
+				&:hover {
+					color: #eb4336;
+				}
+			}
+		}
+	}
+	&__copyright {
+		color: #fff;
+	}
 }
 
+@media all and (min-width: 860px) {
+	.contact {
+		.info__socials {
+			margin-bottom: 20px;
+			margin-top: 40px;
 
+			&__social {
+				transform: scale(1.4);
+			}
+		}
+	}
 
-
-
-@media all and (min-width:860px) {
-    .fifth {
-        .info .socials {
-            margin-bottom: 20px;
-            margin-top: 40px;
-
-            div {
-                transform: scale(1.4);
-            }
-        }
-
-        .info .form .inputs label textarea {
-            height: 150px;
-        }
-    }
+	.info__form__inputs__message {
+		height: 150px;
+	}
 }
 
-@media all and (min-width:1124px) {
+@media all and (min-width: 1124px) {
+	.contact {
+		.info {
+			padding: 20px 60px;
 
-    .fifth {
-        .info {
+			&__form__inputs {
+				width: 60%;
 
-            padding: 20px 60px;
+				&__label {
+					input,
+					textarea {
+						width: 70%;
+						font-size: 1.1em;
+						padding: 12px;
+					}
+				}
 
-            .form .inputs {
-                width: 60%;
+				&__reset {
+					font-size: 1.1em;
+				}
+			}
 
-                label {
-
-                    input,
-                    textarea {
-                        width: 70%;
-                        font-size: 1.1em;
-                        padding: 12px;
-                    }
-                }
-
-                button {
-                    font-size: 1.1em;
-                }
-            }
-
-            .socials {
-                width: 46%;
-            }
-        }
-    }
+			&__socials {
+				width: 46%;
+			}
+		}
+	}
 }

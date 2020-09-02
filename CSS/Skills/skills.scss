@@ -1,4 +1,4 @@
-.third {
+.skills {
     background-color: $main-color;
     @include flex(center, center);
     flex-flow: column wrap;
@@ -12,7 +12,7 @@
             @include pseudo(60%, 0, 50%, #fff, 2);
         }
 
-        h2 {
+        &__title {
             text-align: center;
             text-transform: uppercase;
             font-size: 2.1rem;
@@ -26,13 +26,13 @@
         @include flex(center, center);
         flex-flow: column wrap;
 
-        #grid {
+        &__grid {
             position: relative;
             width: 78%;
             margin: 20px auto;
             padding: 0;
 
-            li {
+            &__field {
                 list-style-type: none;
                 position: relative;
                 float: left;
@@ -44,12 +44,9 @@
 
                 * {
                     visibility: visible;
-
                 }
 
-
-
-                .hexagon {
+                &__hex {
                     @include pseudo(100%, 0, 0, #fff);
                     transform: skewY(-30deg) rotate(60deg);
                     overflow: hidden;
@@ -98,13 +95,10 @@
                     }
                 }
 
-                .active {
+                &--active {
                     opacity: 0.5;
                     transition: .3s;
                 }
-
-
-
 
                 &:nth-child(3n+2) {
                     margin: 0 1%;
@@ -122,21 +116,19 @@
                 &:nth-child(6n+4) {
                     margin-left: 0.5%;
                 }
-
-
-
             }
 
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
         }
 
-        .clear:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
 
 
-        .desc {
+
+        &__desc {
             margin: 60px 30px 10px 30px;
             padding: 40px 25px;
             max-width: 90%;
@@ -144,29 +136,25 @@
             background: #fff;
             position: relative;
 
-            h3 {
+            &__title {
                 font-size: 1.4rem;
             }
 
             &::after {
                 @include pseudo(100%, -10px, 10px, rgba(255, 255, 255, 0.7), -1);
             }
-
-
-
-
         }
 
     }
 }
 
 @media all and (min-width:600px) {
-    .third .info #grid {
+    .skills .info .info__grid {
         font-size: 1.4em;
         width: 60vw;
     }
 
-    .third .info .desc {
+    .skills .info .info__desc {
         width: 50vw;
         padding: 40px;
         font-size: 1.2em;
@@ -174,24 +162,23 @@
 }
 
 @media all and (min-width:1000px) {
-    .third {
-
+    .skills {
         .info {
             @include flex(space-between, center);
             flex-flow: row-reverse nowrap;
             padding: 60px 80px;
 
-            #grid {
-                width: 35vw;
+            .info__grid {
+                width: 37vw;
             }
 
-            .desc {
+            .info__desc {
                 margin-right: 140px;
                 font-size: 1.1em;
                 padding: 40px;
                 width: 35vw;
 
-                h3 {
+                .info__title {
                     font-size: 1.5em;
                 }
             }
@@ -200,14 +187,19 @@
 }
 
 @media all and (min-width:1365px) {
-    .third .info .desc {
+    .skills .info .info__desc {
         margin-right: 180px;
     }
 }
 
 
 @media all and (min-width:1865px) {
-    .third .info #grid {
+    .skills .info .info__grid {
         font-size: 2em;
+    }
+
+    .skills .info .info__desc {
+        width: 30vw;
+        padding: 70px 100px;
     }
 }

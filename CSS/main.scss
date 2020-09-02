@@ -1,69 +1,62 @@
 @import './Variables/variables';
 @import './Menu/menu';
-@import './Start/start';
+@import './Header/header';
 @import './About/about';
 @import './Skills/skills';
 @import './Projects/projects';
 @import './Contact/contact';
 
-
-
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 }
 
-
-.stop-scrolling {
-    overflow: hidden;
+.--stop-scrolling {
+	overflow: hidden;
 }
-
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *:focus {
-    outline: 0 none;
+	outline: 0 none;
 }
 
 svg {
-    transform: translateY(-2px);
+	transform: translateY(-2px);
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+	text-decoration: none;
+	color: #000;
 }
 
 section {
-    padding: 50px 0;
+	padding: 50px 0;
 }
 
 footer {
-    padding-top: 40px;
+	padding-top: 40px;
 }
 
-
-@media all and (min-width:600px) {
-
-    .first,
-    .second,
-    .third,
-    .fourth,
-    .fifth {
-        .header {
-            h2 {
-                font-size: 2.5rem;
-            }
-        }
-    }
+@media all and (min-width: 600px) {
+	.home,
+	.about,
+	.skills,
+	.work,
+	.contact {
+		.header {
+			&__title {
+				font-size: 2.5rem;
+			}
+		}
+	}
 }

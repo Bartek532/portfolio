@@ -1,102 +1,102 @@
-.second {
-    padding: 50px 30px 80px 30px;
-    @include flex(center, center);
-    flex-flow: column wrap;
+.about {
+	padding: 50px 30px 80px 30px;
+	@include flex(center, center);
+	flex-flow: column wrap;
 
-    .header {
-        margin: 50px auto 50px auto;
-        position: relative;
+	.header {
+		margin: 50px auto 50px auto;
+		position: relative;
 
-        &::after {
-            @include pseudo(60%, 0, 50%, $main-color, -1);
-        }
+		&::after {
+			@include pseudo(60%, 0, 50%, $main-color, -1);
+		}
 
-        h2 {
-            text-transform: uppercase;
-            font-size: 2.1rem;
-            margin: 0;
-        }
-    }
+		&__title {
+			text-transform: uppercase;
+			font-size: 2.1rem;
+			margin: 0;
+		}
+	}
 
-    .info {
-        @include flex(center, center);
-        flex-flow: column wrap;
-        padding: 40px auto;
+	.info {
+		@include flex(center, center);
+		flex-flow: column wrap;
+		padding: 40px auto;
 
-        .image {
-            width: 335px;
-            height: 490px;
-            margin: 10px auto;
-            position: relative;
-            z-index: 3;
+		&__image {
+			width: 245px;
+			height: 350px;
+			margin: 10px auto;
+			position: relative;
+			z-index: 3;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+			img {
+				width: 100%;
+				height: 100%;
+			}
 
-            &::after {
-                @include pseudo(100%, -15px, -15px, $main-color, -2);
-            }
-        }
+			&::after {
+				@include pseudo(100%, -15px, -15px, $main-color, -2);
+			}
+		}
 
-        .description {
-            margin-top: 50px;
-            padding: 0 20px;
-            border-left: 3px solid $main-color;
-            width: 350px;
-            line-height: 27px;
+		&__description {
+			margin-top: 50px;
+			padding: 0 20px;
+			border-left: 3px solid $main-color;
+			width: 350px;
+			line-height: 27px;
 
-            h3 {
-                font-size: 2.2em;
-                font-weight: bold;
-                margin: 8px 0 25px 0;
-            }
-        }
-    }
-
+			&__title {
+				font-size: 2.2em;
+				font-weight: bold;
+				margin: 8px 0 25px 0;
+			}
+		}
+	}
 }
 
-@media all and (max-width:500px) {
-
-    .second .info .description {
-        width: 100%;
-    }
+@media all and (max-width: 500px) {
+	.info__description {
+		width: 100%;
+	}
 }
 
+@media all and (min-width: 824px) {
+	.about {
+		margin-top: 0px;
 
+		.info {
+			flex-flow: row nowrap;
+			padding: 40px 60px;
 
-@media all and (min-width:824px) {
-    .second {
-        margin-top: 0px;
-
-        .info {
-            flex-flow: row nowrap;
-            padding: 40px 60px;
-
-
-            .description {
-                font-size: 1em;
-                margin: 0 40px;
-            }
-        }
-    }
+			&__description {
+				font-size: 1em;
+				margin: 0 40px;
+			}
+		}
+	}
 }
 
-@media all and (min-width:1000px) {
+@media all and (min-width: 1000px) {
+	.about .info {
+		&__description {
+			width: 45%;
+		}
 
-    .second .info .description {
-        width: 45%;
-    }
+		&__image {
+			width: 335px;
+			height: 490px;
+		}
+	}
 }
 
+@media all and (min-width: 1365px) {
+	.about {
+		margin-top: -70px;
+	}
 
-@media all and (min-width:1365px) {
-    .second {
-        margin-top: -70px;
-    }
-
-    .second .info .description {
-        font-size: 1.1em;
-    }
+	.about .info .info__description {
+		font-size: 1.2em;
+	}
 }
