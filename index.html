@@ -1,324 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="./CSS/main.css" type="text/css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Muli:wght@300;500;600;800&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
-		<title>Portfolio</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./CSS/main.scss" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Muli:wght@300;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
+    <title>Portfolio</title>
+  </head>
 
-	<body>
-		<nav class="nav">
-			<div class="nav__logo">logo</div>
-			<div class="nav__hamburger">
-				<span class="nav__hamburger__item"></span>
-				<span class="nav__hamburger__item"></span>
-				<span class="nav__hamburger__item"></span>
-				<span class="nav__hamburger__item"></span>
-			</div>
+  <body>
+    <nav class="nav">
+      <div class="nav__logo">logo</div>
+      <div class="nav__hamburger">
+        <span class="nav__hamburger__item"></span>
+        <span class="nav__hamburger__item"></span>
+        <span class="nav__hamburger__item"></span>
+        <span class="nav__hamburger__item"></span>
+      </div>
 
-			<div class="menu">
-				<div class="menu__links">
-					<a href="#home" class="menu__links__link" name="home"> start </a>
-					<a href="#about" class="menu__links__link" name="about"> o mnie </a>
-					<a href="#skills" class="menu__links__link" name="skills"> umiejętności </a>
-					<a href="#projects" class="menu__links__link" name="work"> projekty </a>
-					<a href="#contact" class="menu__links__link" name="contact"> kontakt </a>
-				</div>
-			</div>
-		</nav>
+      <div class="menu">
+        <div class="menu__links">
+          <a href="#home" class="menu__links__link" name="home"> start </a>
+          <a href="#about" class="menu__links__link" name="about"> o mnie </a>
+          <a href="#skills" class="menu__links__link" name="skills">
+            umiejętności
+          </a>
+          <a href="#projects" class="menu__links__link" name="work">
+            projekty
+          </a>
+          <a href="#contact" class="menu__links__link" name="contact">
+            kontakt
+          </a>
+        </div>
+      </div>
+    </nav>
 
-		<section class="home" id="home">
-			<div class="home__text" data-aos="fade-right">
-				<h1 class="home__text__name"></h1>
-				<h2 class="home__text__title">front-end developer</h2>
-			</div>
+    <section class="home" id="home">
+      <div class="home__text" data-aos="fade-right">
+        <h1 class="home__text__name"></h1>
+        <h2 class="home__text__title">front-end developer</h2>
+      </div>
 
-			<div class="home__icon">
-				<a href="#about" class="home__icon__item"><i class="fas fa-chevron-down"></i></a>
-			</div>
-		</section>
+      <div class="home__icon">
+        <a href="#about" class="home__icon__item"
+          ><i class="fas fa-chevron-down"></i
+        ></a>
+      </div>
+    </section>
 
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path
-				fill="#f7ca18"
-				fill-opacity="1"
-				d="M0,64L60,90.7C120,117,240,171,360,165.3C480,160,600,96,720,112C840,128,960,224,1080,218.7C1200,213,1320,107,1380,53.3L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-			></path>
-		</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#f7ca18"
+        fill-opacity="1"
+        d="M0,64L60,90.7C120,117,240,171,360,165.3C480,160,600,96,720,112C840,128,960,224,1080,218.7C1200,213,1320,107,1380,53.3L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
 
-		<section class="about" id="about">
-			<div class="header">
-				<h2 class="header__title">o mnie</h2>
-			</div>
-			<div class="info">
-				<div class="info__image" data-aos="fade-down">
-					<img src="./Gallery/front-image.jpg" alt="photo" />
-				</div>
-				<div class="info__description" data-aos="fade-up">
-					<h3 class="info__description__title">Cześć!</h3>
-					<div>
-						Nazywam się Bartek. Już od pewnego czasu interesuję się tworzeniem stron internetowych. Obecnie
-						jestem uczniem trzeciej klasy technikum informatycznego. Ciągle staram się poszerzać swoją
-						wiedzę, poznawać nowe technologie, tworzyć coraz to lepsze aplikacje internetowe. Zawsze
-						wykazuję się punktualnością oraz rzetelnością, jeśli chodzi o przygotowanie projektu. Chciałbym
-						nabyć więcej doświadczenia wykonując zlecenia dla indywidualnych klientów, by potem móc zdobyć
-						pracę w tym zawodzie. Jeśli chciałbyś, bym stworzył Twoją stronę, skorzystaj z informacji
-						podanych poniżej. Zawsze jestem otwarty na innowacyjne pomysły i rozwiązania, myślę więc, że z
-						pewnością się dogadamy.
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="about" id="about">
+      <div class="header">
+        <h2 class="header__title">o mnie</h2>
+      </div>
+      <div class="info">
+        <div class="info__image" data-aos="fade-down">
+          <img src="./Gallery/front-image.jpg" alt="photo" />
+        </div>
+        <div class="info__description" data-aos="fade-up">
+          <h3 class="info__description__title">Cześć!</h3>
+          <div>
+            Nazywam się Bartek. Już od pewnego czasu interesuję się tworzeniem
+            stron internetowych. Obecnie jestem uczniem trzeciej klasy technikum
+            informatycznego. Ciągle staram się poszerzać swoją wiedzę, poznawać
+            nowe technologie, tworzyć coraz to lepsze aplikacje internetowe.
+            Zawsze wykazuję się punktualnością oraz rzetelnością, jeśli chodzi o
+            przygotowanie projektu. Chciałbym nabyć więcej doświadczenia
+            wykonując zlecenia dla indywidualnych klientów, by potem móc zdobyć
+            pracę w tym zawodzie. Jeśli chciałbyś, bym stworzył Twoją stronę,
+            skorzystaj z informacji podanych poniżej. Zawsze jestem otwarty na
+            innowacyjne pomysły i rozwiązania, myślę więc, że z pewnością się
+            dogadamy.
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="skills" id="skills">
-			<div class="header">
-				<h2 class="header__title">umiejętności</h2>
-			</div>
-			<div class="info">
-				<ul class="info__grid" data-aos="fade-right">
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex HTML" onclick="changeInfo('HTML')">
-							<i class="fab fa-html5"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex CSS" onclick="changeInfo('CSS')">
-							<i class="fab fa-css3-alt"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex JS" onclick="changeInfo('JS')">
-							<i class="fab fa-js"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex MySQL" onclick="changeInfo('MySQL')">
-							<i class="fas fa-database"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex SCSS" onclick="changeInfo('SCSS')">
-							<i class="fab fa-sass"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex Vue" onclick="changeInfo('Vue')">
-							<i class="fab fa-vuejs"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex Github" onclick="changeInfo('Github')">
-							<i class="fab fa-github"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex Node.js" onclick="changeInfo('Node.js')">
-							<i class="fab fa-node-js"></i>
-						</div>
-					</li>
-					<li class="info__grid__field">
-						<div class="info__grid__field__hex NPM" onclick="changeInfo('NPM')">
-							<i class="fab fa-npm"></i>
-						</div>
-					</li>
-				</ul>
-				<div class="info__desc" data-aos="fade-up">
-					<h3 class="info__desc__title">Moje umiejętności</h3>
-					<div class="info__desc__text">
-						Chcesz wiedzieć, co tak naprawdę potrafię? Skorzystaj z menu, wybierając technologię :)
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="skills" id="skills">
+      <div class="header">
+        <h2 class="header__title">umiejętności</h2>
+      </div>
+      <div class="info">
+        <ul class="info__grid" data-aos="fade-right">
+          <li class="info__grid__field">
+            <div
+              class="info__grid__field__hex HTML"
+              onclick="changeInfo('HTML')"
+            >
+              <span aria-label="html" class="fab fa-html5"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div class="info__grid__field__hex CSS" onclick="changeInfo('CSS')">
+              <span aria-label="css" class="fab fa-css3-alt"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div class="info__grid__field__hex JS" onclick="changeInfo('JS')">
+              <span aria-label="js" class="fab fa-js"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div
+              class="info__grid__field__hex MySQL"
+              onclick="changeInfo('MySQL')"
+            >
+              <span aria-label="database" class="fas fa-database"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div
+              class="info__grid__field__hex SCSS"
+              onclick="changeInfo('SCSS')"
+            >
+              <span aria-label="sass" class="fab fa-sass"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div class="info__grid__field__hex Vue" onclick="changeInfo('Vue')">
+              <span aria-label="vue" class="fab fa-vuejs"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div
+              class="info__grid__field__hex Github"
+              onclick="changeInfo('Github')"
+            >
+              <span aria-label="github" class="fab fa-github"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div
+              class="info__grid__field__hex Node.js"
+              onclick="changeInfo('Node.js')"
+            >
+              <span aria-label="node" class="fab fa-node-js"></span>
+            </div>
+          </li>
+          <li class="info__grid__field">
+            <div class="info__grid__field__hex NPM" onclick="changeInfo('NPM')">
+              <span aria-label="npm" class="fab fa-npm"></span>
+            </div>
+          </li>
+        </ul>
+        <div class="info__desc" data-aos="fade-up">
+          <h3 class="info__desc__title">Moje umiejętności</h3>
+          <div class="info__desc__text">
+            Chcesz wiedzieć, co tak naprawdę potrafię? Skorzystaj z menu,
+            wybierając technologię :)
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="work" id="projects">
-			<div class="header">
-				<h2 class="header__title">projekty</h2>
-			</div>
+    <section class="work" id="projects">
+      <div class="header">
+        <h2 class="header__title">projekty</h2>
+      </div>
 
-			<div class="projects">
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">Aplikacja pogodowa</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>(S)CSS</li>
-								<li>JS</li>
-								<li>Vue.js (REST API)</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<a href="https://bartek532.github.io/weather/" target="_blank"><button>live</button></a>
-							<a href="https://github.com/Bartek532/weather" target="_blank"><button>code</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">Przepis?</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>(S)CSS</li>
-								<li>JS</li>
-								<li>Vue.js (REST API)</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<button>live</button>
-							<button>code</button>
-						</div>
-					</div>
-				</div>
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">Blog</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>(S)CSS</li>
-								<li>JS</li>
-								<li>Vue.js (REST API)</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<a href="https://bartek532.github.io/blog/" target="_blank"><button>live</button></a>
-							<a href="https://github.com/Bartek532/blog" target="_blank"><button>code</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">Gry</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>(S)CSS</li>
-								<li>JS (jQuery)</li>
-								<li>Canvas API</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<button>live</button>
-							<button>code</button>
-						</div>
-					</div>
-				</div>
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">Troszkę animacji ;)</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>JS (GSAP)</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<a href="https://bartek532.github.io/animations/" target="_blank"><button>live</button></a>
-							<a href="https://github.com/Bartek532/animations" target="_blank"><button>code</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="project" data-aos="zoom-in">
-					<div class="project__image"></div>
-					<div class="project__incentive">Hover to see more...</div>
-					<div class="project__description">
-						<h3 class="project__description__title">ToDo</h3>
-						<div class="project__description__technologies">
-							Użyte technologie:
-							<ul>
-								<li>HTML</li>
-								<li>(S)CSS</li>
-								<li>JS</li>
-								<li>Vue.js</li>
-							</ul>
-						</div>
-						<div class="project__description__buttons">
-							<a href="https://bartek532.github.io/todo/" target="_blank"><button>live</button></a>
-							<a href="https://github.com/Bartek532/todo" target="_blank"><button>code</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+      <div class="projects">
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">Aplikacja pogodowa</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>(S)CSS</li>
+                <li>JS</li>
+                <li>Vue.js (REST API)</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <a href="https://bartek532.github.io/weather/" target="_blank"
+                ><button>live</button></a
+              >
+              <a href="https://github.com/Bartek532/weather" target="_blank"
+                ><button>code</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">Przepis?</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>(S)CSS</li>
+                <li>JS</li>
+                <li>Vue.js (REST API)</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <button>live</button>
+              <button>code</button>
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">Blog</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>(S)CSS</li>
+                <li>JS</li>
+                <li>Vue.js (REST API)</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <a href="https://bartek532.github.io/blog/" target="_blank"
+                ><button>live</button></a
+              >
+              <a href="https://github.com/Bartek532/blog" target="_blank"
+                ><button>code</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">Gry</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>(S)CSS</li>
+                <li>JS (jQuery)</li>
+                <li>Canvas API</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <button>live</button>
+              <button>code</button>
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">Troszkę animacji ;)</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS (GSAP)</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <a href="https://bartek532.github.io/animations/" target="_blank"
+                ><button>live</button></a
+              >
+              <a href="https://github.com/Bartek532/animations" target="_blank"
+                ><button>code</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project" data-aos="zoom-in">
+          <div class="project__image"></div>
+          <div class="project__incentive">Hover to see more...</div>
+          <div class="project__description">
+            <h3 class="project__description__title">ToDo</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>HTML</li>
+                <li>(S)CSS</li>
+                <li>JS</li>
+                <li>Vue.js</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <a href="https://bartek532.github.io/todo/" target="_blank"
+                ><button>live</button></a
+              >
+              <a href="https://github.com/Bartek532/todo" target="_blank"
+                ><button>code</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="contact" id="contact">
-			<div class="header">
-				<h2 class="header__title">kontakt</h2>
-			</div>
-			<div class="info">
-				<div class="info__form">
-					<form class="info__form__inputs">
-						<label class="info__form__inputs__label">
-							<input type="text" placeholder="imię" class="info__form__inputs__name" /><br />
-						</label>
-						<label class="info__form__inputs__label">
-							<input type="text" class="info__form__inputs__email" placeholder="E-mail" /><br />
-						</label>
-						<label class="info__form__inputs__label">
-							<textarea class="info__form__inputs__message" placeholder="wiadomość"></textarea>
-						</label>
-					</form>
+    <section class="contact" id="contact">
+      <div class="header">
+        <h2 class="header__title">kontakt</h2>
+      </div>
+      <div class="info">
+        <div class="info__form">
+          <form class="info__form__inputs">
+            <label class="info__form__inputs__label">
+              <input
+                type="text"
+                placeholder="imię"
+                class="info__form__inputs__name"
+              /><br />
+            </label>
+            <label class="info__form__inputs__label">
+              <input
+                type="text"
+                class="info__form__inputs__email"
+                placeholder="E-mail"
+              /><br />
+            </label>
+            <label class="info__form__inputs__label">
+              <textarea
+                class="info__form__inputs__message"
+                placeholder="wiadomość"
+              ></textarea>
+            </label>
+          </form>
 
-					<button class="info__form__reset">wyślij</button>
-				</div>
+          <button class="info__form__reset">wyślij</button>
+        </div>
 
-				<div class="info__socials">
-					<a href="https://www.facebook.com/profile.php?id=100014067669589">
-						<div class="info__socials__social info__socials__facebook">
-							<i class="fab fa-facebook-f"></i>
-						</div>
-					</a>
-					<a href="https://twitter.com/Bartuninho">
-						<div class="info__socials__social info__socials__twitter">
-							<i class="fab fa-twitter"></i>
-						</div>
-					</a>
-					<a href="https://www.instagram.com/bartoszzagrodzki">
-						<div class="info__socials__social info__socials__instagram">
-							<i class="fab fa-instagram"></i>
-						</div>
-					</a>
-					<a href="mailto:bartzagr@gmail.com">
-						<div class="info__socials__social info__socials__google">
-							<i class="fab fa-google"></i>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="contact__copyright">2020 &copy; All rights reserved.</div>
-		</section>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <div class="info__socials">
+          <a href="https://www.facebook.com/profile.php?id=100014067669589">
+            <div class="info__socials__social info__socials__facebook">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+          </a>
+          <a href="https://twitter.com/Bartuninho">
+            <div class="info__socials__social info__socials__twitter">
+              <i class="fab fa-twitter"></i>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/bartoszzagrodzki">
+            <div class="info__socials__social info__socials__instagram">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="mailto:bartzagr@gmail.com">
+            <div class="info__socials__social info__socials__google">
+              <i class="fab fa-google"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact__copyright">2020 &copy; All rights reserved.</div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-		<script src="./Scripts/typer.js"></script>
-		<script src="./Scripts/skills.js"></script>
-		<script src="./Scripts/validate.js"></script>
-		<script src="./Scripts/menu.js"></script>
-		<script src="./Scripts/mobile_menu.js"></script>
-	</body>
+    <script src="./Scripts/typer.js"></script>
+    <script src="./Scripts/skills.js"></script>
+    <script src="./Scripts/validate.js"></script>
+    <script src="./Scripts/menu.js"></script>
+    <script src="./Scripts/mobile_menu.js"></script>
+  </body>
 </html>

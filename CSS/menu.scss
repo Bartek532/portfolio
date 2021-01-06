@@ -1,0 +1,163 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	@include flex(space-between, center);
+	padding: 7px 0px 7px 10px;
+	background-color: $main-color;
+
+	&__logo {
+		width: 30px;
+		height: 30px;
+		background: #fff;
+	}
+
+	&__hamburger {
+		width: 70px;
+		height: 45px;
+		cursor: pointer;
+		border: none;
+		border-radius: 0 0 0 30px;
+		position: relative;
+
+		&__item {
+			display: block;
+			width: 35px;
+			height: 5.3px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #000;
+			border-radius: 50px;
+			transition: 0.3s;
+
+			&:nth-child(1) {
+				transform: translate(-50%, -50%) translateY(-12px);
+				transition: 0.3s;
+			}
+
+			&:nth-child(4) {
+				transform: translate(-50%, -50%) translateY(12px);
+				transition: 0.3s;
+			}
+		}
+
+		&--active {
+			span:nth-child(1) {
+				transform: translate(-50%, -50%) translateY(-33px);
+				opacity: 0;
+			}
+
+			span:nth-child(4) {
+				transform: translate(-50%, -50%) translateY(33px);
+				opacity: 0;
+			}
+
+			span:nth-child(2) {
+				transform: translate(-50%, -50%) rotate(45deg);
+				transition-delay: 0.2s;
+			}
+
+			span:nth-child(3) {
+				transform: translate(-50%, -50%) rotate(-45deg);
+				transition-delay: 0.2s;
+			}
+		}
+	}
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-1000px);
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	background: #fff;
+	transition: transform 0.5s;
+
+	&--active {
+		transform: translateX(0);
+		transition: transform 0.5s;
+	}
+
+	&__links {
+		height: 100%;
+		@include flex(center, center);
+		flex-flow: column wrap;
+
+		&__link {
+			font-size: 1.5em;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 7px auto;
+			position: relative;
+
+			&::after {
+				@include pseudo(0%, 0, 0);
+				border-bottom: 2.5px solid #000;
+			}
+
+			&:hover::after {
+				width: 100%;
+				transition: 0.3s;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 720px) {
+	.menu__links__link {
+		font-size: 1.8em;
+		margin: 10px auto;
+		letter-spacing: 1.5px;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	.nav {
+		&__hamburger {
+			display: none;
+		}
+
+		.menu {
+			display: flex;
+			height: auto;
+			position: static;
+			transform: translate(0);
+			background: transparent;
+
+			&__links {
+				@include flex(space-around, center);
+				margin: 5px 20px 5px auto;
+				flex-flow: row nowrap;
+
+				&__link {
+					margin: 5px 27px;
+					font-weight: bold;
+					font-size: 1.1em;
+					position: relative;
+
+					&::after {
+						@include pseudo(0%, 0, 0);
+						border-bottom: 2px solid #000;
+					}
+
+					&:hover::after {
+						width: 100%;
+						transition: 0.3s;
+					}
+
+					&--active::after {
+						width: 100%;
+						transition: 0.3s;
+					}
+				}
+			}
+		}
+	}
+}
