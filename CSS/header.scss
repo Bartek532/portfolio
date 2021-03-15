@@ -1,86 +1,76 @@
 .home {
-    background-color: $main-color;
-    padding: 250px 30px 200px 30px;
-    text-transform: uppercase;
-    position: relative;
+  background-color: $main-color;
+  padding: 250px 30px 200px 30px;
+  text-transform: uppercase;
+  position: relative;
 
+  &__text {
+    border-left: 3px solid $primary-white;
+    padding-left: 20px;
 
+    &__name {
+      width: 60%;
+      font-size: 2.4rem;
+      margin: 0;
+    }
+
+    &__title {
+      width: 70%;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+  }
+
+  &__icon {
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    animation: icon 1.5s ease-out infinite;
+
+    &__item {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .home {
     &__text {
-        border-left: 3px solid #fff;
-        padding-left: 20px;
-        position: relative;
+      &__name {
+        width: 80%;
+        font-size: 4em;
+      }
 
-
-        &__name {
-            width: 60%;
-            font-size: 2.4em;
-            margin: 0;
-        }
-
-        &__title {
-            width: 70%;
-            margin-top: 10px;
-            font-weight: 300;
-
-        }
+      &__title {
+        font-size: 2em;
+      }
     }
 
     &__icon {
-        font-size: 2.5em;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 3;
-        animation: icon 1.5s ease-out infinite;
-
-        &__item {
-            color: #fff;
-            cursor: pointer;
-        }
+      font-size: 3.5em;
+      margin-bottom: -75px;
     }
-
+  }
 }
 
+@media all and (min-width: 1700px) {
+  .home {
+    &__text {
+      padding-left: 50px;
+      margin-left: 20px;
 
+      &__name {
+        font-size: 5em;
+      }
 
-
-@media all and (min-width:1000px) {
-
-    .home {
-        &__text {
-
-            &__name {
-                width: 80%;
-                font-size: 4em;
-            }
-
-            &__title {
-                font-size: 2em;
-            }
-        }
-
-        &__icon {
-            font-size: 3.5em;
-            margin-bottom: -75px;
-        }
+      &__title {
+        font-size: 2.7em;
+      }
     }
-}
-
-@media all and (min-width:1700px) {
-    .home {
-        &__text {
-            padding-left: 50px;
-            margin-left: 20px;
-
-            &__name {
-                font-size: 5em;
-            }
-
-            &__title {
-                font-size: 2.7em;
-            }
-        }
-    }
+  }
 }

@@ -1,12 +1,15 @@
 let i = 0;
-let text = "bartosz zagrodzki";
-let speed = 130;
+const text = "bartosz zagrodzki";
+const typingSpeed = 130;
 
-function typer() {
-    if (i < text.length) {
-        document.querySelector('.home__text__name').innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typer, speed);
-    }
-}
+const pageTitle = document.querySelector(".home__text__name");
+
+const typer = () => {
+  if (i < text.length) {
+    pageTitle.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typer, typingSpeed);
+  }
+};
+
 typer();
