@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./CSS/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Muli:wght@300;500;600;800&display=swap"
       rel="stylesheet"
@@ -14,12 +16,19 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     />
-    <title>Portfolio</title>
+    <title>Bartosz Zagrodzki | Portfolio</title>
   </head>
 
   <body>
     <nav class="nav">
-      <div class="nav__logo">logo</div>
+      <a
+        class="nav__logo"
+        href="https://github.com/Bartek532"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="./images/logo.svg" alt="bear" class="nav__logo__image" />
+      </a>
       <div class="nav__hamburger">
         <span class="nav__hamburger__item"></span>
         <span class="nav__hamburger__item"></span>
@@ -28,19 +37,23 @@
       </div>
 
       <div class="menu">
-        <div class="menu__links">
-          <a href="#home" class="menu__links__link" name="home"> start </a>
-          <a href="#about" class="menu__links__link" name="about"> o mnie </a>
-          <a href="#skills" class="menu__links__link" name="skills">
-            umiejętności
-          </a>
-          <a href="#projects" class="menu__links__link" name="work">
-            projekty
-          </a>
-          <a href="#contact" class="menu__links__link" name="contact">
-            kontakt
-          </a>
-        </div>
+        <ul class="menu__links">
+          <li>
+            <a href="#home" class="menu__links__link"> start </a>
+          </li>
+          <li>
+            <a href="#about" class="menu__links__link"> o mnie </a>
+          </li>
+          <li>
+            <a href="#skills" class="menu__links__link"> umiejętności </a>
+          </li>
+          <li>
+            <a href="#projects" class="menu__links__link"> projekty </a>
+          </li>
+          <li>
+            <a href="#contact" class="menu__links__link"> kontakt </a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -372,10 +385,10 @@
     </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="./Scripts/typer.js"></script>
-    <script src="./Scripts/skills.js"></script>
-    <script src="./Scripts/validate.js"></script>
-    <script src="./Scripts/menu.js"></script>
-    <script src="./Scripts/mobile_menu.js"></script>
+    <script src="./js/typer.js"></script>
+    <script src="./js/skills.js"></script>
+    <script src="./js/validate.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/mobile_menu.js"></script>
   </body>
 </html>

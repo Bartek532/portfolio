@@ -73,14 +73,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7px 0px 7px 10px;
+  padding: 5px 0px 5px 15px;
   background-color: #f7ca18;
 }
 
 .nav__logo {
-  width: 30px;
-  height: 30px;
-  background: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__logo__image {
+  width: 100%;
+  height: 100%;
 }
 
 .nav__hamburger {
@@ -187,38 +191,52 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .menu__links__link {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 7px auto;
+  line-height: 2.3rem;
   position: relative;
 }
 
 .menu__links__link::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
-  width: 0%;
+  width: 100%;
   height: 100%;
   background: transparent;
   z-index: 1;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   border-bottom: 2.5px solid #000;
 }
 
 .menu__links__link:hover::after {
-  width: 100%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 @media all and (min-width: 720px) {
   .menu__links__link {
-    font-size: 1.8em;
-    margin: 10px auto;
+    font-size: 1.8rem;
+    line-height: 2.55rem;
     letter-spacing: 1.5px;
   }
 }
@@ -255,29 +273,27 @@
   .nav .menu__links__link {
     margin: 5px 27px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     position: relative;
   }
   .nav .menu__links__link::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
-    width: 0%;
+    width: 100%;
     height: 100%;
     background: transparent;
     z-index: 1;
     border-bottom: 2px solid #000;
   }
-  .nav .menu__links__link:hover::after {
-    width: 100%;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  .nav .menu__links__link--active::after {
-    width: 100%;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+  .nav .menu__links__link:hover::after, .nav .menu__links__link--active::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
   }
 }
 
@@ -374,7 +390,7 @@
 
 .about .header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 50%;
   width: 60%;
@@ -421,7 +437,7 @@
 
 .about .info__image::after {
   position: absolute;
-  content: '';
+  content: "";
   top: -15px;
   left: -15px;
   width: 100%;
@@ -510,7 +526,7 @@
 
 .skills .header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 50%;
   width: 60%;
@@ -569,7 +585,7 @@
 
 .skills .info__grid__field__hex {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
@@ -760,7 +776,7 @@
 
 .work .header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 50%;
   width: 60%;
@@ -825,7 +841,7 @@
 
 .work .projects .project::after, .work .projects .project::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
@@ -858,7 +874,7 @@
 
 .work .projects .project__image {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
@@ -871,7 +887,7 @@
 
 .work .projects .project__incentive {
   position: absolute;
-  content: '';
+  content: "";
   top: auto;
   left: 0;
   width: 100%;
@@ -1028,7 +1044,7 @@
 
 .contact .header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 50%;
   width: 60%;
@@ -1186,7 +1202,7 @@
 
 .contact .info__socials__social::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 123%;
   left: -150%;
   width: 200%;

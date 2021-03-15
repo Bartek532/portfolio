@@ -1,53 +1,59 @@
-$main-color: #f7ca18;
+$main-color: #f7ca18; //95D5B2
 $additional: rgb(108, 122, 137);
+$primary-white: #fff;
 
-@mixin flex($jus, $ali) {
-    display: flex;
-    justify-content: $jus;
-    align-items: $ali;
+@mixin flex($jus: center, $ali: center) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $ali;
 }
 
-@mixin pseudo($width, $top, $left, $background:transparent, $index:1) {
-    position: absolute;
-    content: '';
-    top: $top;
-    left: $left;
-    width: $width;
-    height: 100%;
-    background: $background;
-    z-index: $index;
-
+@mixin pseudo(
+  $width: 100%,
+  $top: 0,
+  $left: 0,
+  $background: transparent,
+  $index: 1
+) {
+  position: absolute;
+  content: "";
+  top: $top;
+  left: $left;
+  width: $width;
+  height: 100%;
+  background: $background;
+  z-index: $index;
 }
 
 //animations
 
 @keyframes icon {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    60% {
-        transform: translateY(-22px);
-    }
+  60% {
+    transform: translateY(-22px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes social {
-    0% {
-        top: 123%;
-        left: -180%;
-    }
+  0% {
+    top: 123%;
+    left: -180%;
+  }
 
-    75% {
-        top: -123%;
-        left: 20%;
-    }
+  75% {
+    top: -123%;
+    left: 20%;
+  }
 
-    100% {
-        top: -10%;
-        left: -50%;
-    }
+  100% {
+    top: -10%;
+    left: -50%;
+  }
 }
