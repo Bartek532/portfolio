@@ -25,22 +25,6 @@ $primary-white: #fff;
   z-index: $index;
 }
 
-//animations
-
-@keyframes icon {
-  0% {
-    transform: translateY(0);
-  }
-
-  60% {
-    transform: translateY(-22px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes social {
   0% {
     top: 123%;

@@ -1,33 +1,4 @@
-@-webkit-keyframes icon {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  60% {
-    -webkit-transform: translateY(-22px);
-            transform: translateY(-22px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes icon {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  60% {
-    -webkit-transform: translateY(-22px);
-            transform: translateY(-22px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
+@charset "UTF-8";
 @-webkit-keyframes social {
   0% {
     top: 123%;
@@ -42,7 +13,6 @@
     left: -50%;
   }
 }
-
 @keyframes social {
   0% {
     top: 123%;
@@ -73,13 +43,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 0px 5px 15px;
+  padding: 7px 0px 7px 15px;
   background-color: #f7ca18;
 }
 
 .nav__logo {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 .nav__logo__image {
@@ -311,18 +281,18 @@
 
 .home__text__name {
   width: 60%;
-  font-size: 2.4em;
+  font-size: 2.4rem;
   margin: 0;
 }
 
 .home__text__title {
   width: 70%;
-  margin-top: 10px;
+  margin-top: 13px;
   font-weight: 300;
 }
 
 .home__icon {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -338,35 +308,69 @@
   cursor: pointer;
 }
 
-@media all and (min-width: 1000px) {
+@-webkit-keyframes icon {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-22px);
+            transform: translateY(-22px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes icon {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-22px);
+            transform: translateY(-22px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media all and (min-width: 700px) {
+  .home__text {
+    padding-left: 35px;
+    margin-left: 30px;
+  }
   .home__text__name {
     width: 80%;
-    font-size: 4em;
+    font-size: 3.2rem;
   }
   .home__text__title {
-    font-size: 2em;
+    font-size: 1.7rem;
   }
   .home__icon {
-    font-size: 3.5em;
-    margin-bottom: -75px;
+    font-size: 3.5rem;
+    bottom: -20px;
   }
 }
 
 @media all and (min-width: 1700px) {
   .home__text {
     padding-left: 50px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   .home__text__name {
-    font-size: 5em;
+    font-size: 4.7rem;
   }
   .home__text__title {
-    font-size: 2.7em;
+    font-size: 2.7rem;
   }
 }
 
 .about {
-  padding: 50px 30px 80px 30px;
+  padding: 20px 30px 80px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,6 +384,7 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  width: 100%;
 }
 
 .about .header {
@@ -414,19 +419,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 40px auto;
+  width: 100%;
 }
 
 .about .info__image {
-  width: 250px;
-  height: 381px;
-  margin: 10px auto;
+  aspect-ratio: 6/9;
+  width: 80%;
+  max-width: 330px;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
-  z-index: 3;
+  margin: 20px 0;
 }
 
 .about .info__image img {
@@ -448,56 +454,33 @@
 .about .info__description {
   margin-top: 50px;
   padding: 0 20px;
+  width: 100%;
+  max-width: 550px;
   border-left: 3px solid #f7ca18;
-  width: 350px;
-  line-height: 27px;
+  line-height: 1.6rem;
 }
 
 .about .info__description__title {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   font-weight: bold;
   margin: 8px 0 25px 0;
 }
 
-@media all and (max-width: 500px) {
-  .info__description {
-    width: 100%;
-  }
-}
-
-@media all and (min-width: 824px) {
-  .about {
-    margin-top: 0px;
-  }
-  .about .info {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    padding: 40px 60px;
-  }
-  .about .info__description {
-    font-size: 1em;
-    margin: 0 40px;
-  }
-}
-
 @media all and (min-width: 1000px) {
-  .about .info__description {
-    width: 45%;
+  .about .info {
+    padding: 30px 10px;
   }
   .about .info__image {
-    width: 335px;
-    height: 511px;
+    margin-right: 60px;
+  }
+  .about .info__description {
+    margin: 0;
   }
 }
 
-@media all and (min-width: 1365px) {
-  .about {
-    margin-top: -70px;
-  }
-  .about .info .info__description {
-    font-size: 1.2em;
+@media all and (min-width: 1400px) {
+  .about .info__image {
+    margin-right: 120px;
   }
 }
 
@@ -1310,10 +1293,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-*:focus {
-  outline: 0 none;
-}
-
 svg {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -1340,5 +1319,71 @@ footer {
   .contact .header__title {
     font-size: 2.5rem;
   }
+}
+
+/*
+  Improved screen reader only CSS class
+  @author Gaël Poupard
+    @note Based on Yahoo!'s technique
+    @author Thierry Koblentz
+    @see https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+  * 1.
+    @note `clip` is deprecated but works everywhere
+    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+  * 2.
+    @note `clip-path` is the future-proof version, but not very well supported yet
+    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+    @see http://caniuse.com/#search=clip-path
+    @author Yvain Liechti
+    @see https://twitter.com/ryuran78/status/778943389819604992
+  * 3.
+    @note preventing text to be condensed
+    author J. Renée Beach
+    @see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    @note Drupal 8 goes with word-wrap: normal instead
+    @see https://www.drupal.org/node/2045151
+    @see http://cgit.drupalcode.org/drupal/commit/?id=5b847ea
+  * 4.
+    @note !important is important
+    @note Obviously you wanna hide something
+    @author Harry Roberts
+    @see https://csswizardry.com/2016/05/the-importance-of-important/
+*/
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  /* 3 */
+}
+
+/*
+  Use in conjunction with .sr-only to only display content when it's focused.
+  @note Useful for skip links 
+  @see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+  @note Based on a HTML5 Boilerplate technique, included in Bootstrap
+  @note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+    @author Sylvain Pigeard
+    @see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
 }
 /*# sourceMappingURL=main.css.map */

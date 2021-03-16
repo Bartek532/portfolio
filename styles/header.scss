@@ -16,13 +16,13 @@
 
     &__title {
       width: 70%;
-      margin-top: 10px;
+      margin-top: 13px;
       font-weight: 300;
     }
   }
 
   &__icon {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -32,28 +32,44 @@
     animation: icon 1.5s ease-out infinite;
 
     &__item {
-      color: #fff;
+      color: $primary-white;
       cursor: pointer;
     }
   }
 }
 
-@media all and (min-width: 1000px) {
+@keyframes icon {
+  0% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-22px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media all and (min-width: 700px) {
   .home {
     &__text {
+      padding-left: 35px;
+      margin-left: 30px;
       &__name {
         width: 80%;
-        font-size: 4em;
+        font-size: 3.2rem;
       }
 
       &__title {
-        font-size: 2em;
+        font-size: 1.7rem;
       }
     }
 
     &__icon {
-      font-size: 3.5em;
-      margin-bottom: -75px;
+      font-size: 3.5rem;
+      bottom: -20px;
     }
   }
 }
@@ -62,14 +78,14 @@
   .home {
     &__text {
       padding-left: 50px;
-      margin-left: 20px;
+      margin-left: 40px;
 
       &__name {
-        font-size: 5em;
+        font-size: 4.7rem;
       }
 
       &__title {
-        font-size: 2.7em;
+        font-size: 2.7rem;
       }
     }
   }

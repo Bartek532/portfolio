@@ -1,102 +1,82 @@
 .about {
-	padding: 50px 30px 80px 30px;
-	@include flex(center, center);
-	flex-flow: column wrap;
+  padding: 20px 30px 80px 30px;
+  @include flex;
+  flex-flow: column wrap;
+  width: 100%;
 
-	.header {
-		margin: 50px auto 50px auto;
-		position: relative;
+  .header {
+    margin: 50px auto 50px auto;
+    position: relative;
 
-		&::after {
-			@include pseudo(60%, 0, 50%, $main-color, -1);
-		}
+    &::after {
+      @include pseudo(60%, 0, 50%, $main-color, -1);
+    }
 
-		&__title {
-			text-transform: uppercase;
-			font-size: 2.1rem;
-			margin: 0;
-		}
-	}
+    &__title {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      margin: 0;
+    }
+  }
 
-	.info {
-		@include flex(center, center);
-		flex-flow: column wrap;
-		padding: 40px auto;
+  .info {
+    @include flex;
+    flex-wrap: wrap;
+    padding: 40px auto;
+    width: 100%;
 
-		&__image {
-			width: 250px;
-			height: 381px;
-			margin: 10px auto;
-			position: relative;
-			z-index: 3;
+    &__image {
+      aspect-ratio: 6/9;
+      width: 80%;
+      max-width: 330px;
+      object-fit: contain;
+      position: relative;
+      margin: 20px 0;
 
-			img {
-				width: 100%;
-				height: 100%;
-			}
+      img {
+        width: 100%;
+        height: 100%;
+      }
 
-			&::after {
-				@include pseudo(100%, -15px, -15px, $main-color, -2);
-			}
-		}
+      &::after {
+        @include pseudo(100%, -15px, -15px, $main-color, -2);
+      }
+    }
 
-		&__description {
-			margin-top: 50px;
-			padding: 0 20px;
-			border-left: 3px solid $main-color;
-			width: 350px;
-			line-height: 27px;
+    &__description {
+      margin-top: 50px;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 550px;
+      border-left: 3px solid $main-color;
+      line-height: 1.6rem;
 
-			&__title {
-				font-size: 2.2em;
-				font-weight: bold;
-				margin: 8px 0 25px 0;
-			}
-		}
-	}
-}
-
-@media all and (max-width: 500px) {
-	.info__description {
-		width: 100%;
-	}
-}
-
-@media all and (min-width: 824px) {
-	.about {
-		margin-top: 0px;
-
-		.info {
-			flex-flow: row nowrap;
-			padding: 40px 60px;
-
-			&__description {
-				font-size: 1em;
-				margin: 0 40px;
-			}
-		}
-	}
+      &__title {
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin: 8px 0 25px 0;
+      }
+    }
+  }
 }
 
 @media all and (min-width: 1000px) {
-	.about .info {
-		&__description {
-			width: 45%;
-		}
+  .about .info {
+    padding: 30px 10px;
+    &__image {
+      margin-right: 60px;
+    }
 
-		&__image {
-			width: 335px;
-			height: 511px;
-		}
-	}
+    &__description {
+      margin: 0;
+    }
+  }
 }
 
-@media all and (min-width: 1365px) {
-	.about {
-		margin-top: -70px;
-	}
-
-	.about .info .info__description {
-		font-size: 1.2em;
-	}
+@media all and (min-width: 1400px) {
+  .about .info {
+    &__image {
+      margin-right: 120px;
+    }
+  }
 }
