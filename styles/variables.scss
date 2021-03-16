@@ -24,20 +24,3 @@ $primary-white: #fff;
   background: $background;
   z-index: $index;
 }
-
-@keyframes social {
-  0% {
-    top: 123%;
-    left: -180%;
-  }
-
-  75% {
-    top: -123%;
-    left: 20%;
-  }
-
-  100% {
-    top: -10%;
-    left: -50%;
-  }
-}

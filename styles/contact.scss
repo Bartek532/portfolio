@@ -1,194 +1,203 @@
 .contact {
-	background: $main-color;
-	@include flex(center, center);
-	flex-flow: column wrap;
-	padding-bottom: 10px;
+  background: $main-color;
+  @include flex;
+  flex-flow: column wrap;
+  padding-bottom: 10px;
 
-	.header {
-		margin: 10px auto 20px auto;
-		position: relative;
+  .header {
+    margin: 10px auto 20px auto;
+    position: relative;
 
-		&::after {
-			@include pseudo(60%, 0, 50%, #fff, 1);
-		}
+    &::after {
+      @include pseudo(60%, 0, 50%, #fff, 1);
+    }
 
-		&__title {
-			text-transform: uppercase;
-			font-size: 2.1rem;
-			margin: 0;
-			position: relative;
-			z-index: 3;
-		}
-	}
+    &__title {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      margin: 0;
+      position: relative;
+      z-index: 3;
+    }
+  }
 
-	.info {
-		@include flex(center, center);
-		flex-flow: column wrap;
-		width: 100%;
+  .info {
+    @include flex;
+    flex-flow: column wrap;
+    width: 100%;
 
-		&__form {
-			@include flex(center, center);
-			flex-flow: column wrap;
-			width: 100%;
+    &__form {
+      @include flex;
+      flex-flow: column wrap;
+      margin-top: 30px;
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
 
-			&__inputs {
-				@include flex(center, center);
-				flex-flow: column wrap;
-				margin-top: 30px;
-				width: 100%;
-				font-family: 'Montserrat', sans-serif;
+      &__input {
+        border: 0 none;
+        width: 80%;
+        margin: 7px;
+        padding: 10px;
+        text-transform: uppercase;
+        max-width: 375px;
 
-				&__label {
-					width: 100%;
-					@include flex(center, center);
+        &--error {
+          border-bottom: 2px solid red;
+        }
+      }
 
-					input,
-					textarea {
-						border: 0 none;
-						width: 80%;
-						margin: 7px;
-						padding: 10px;
-						text-transform: uppercase;
+      &__textarea {
+        height: 100px;
+      }
 
-						&:focus {
-							border-bottom: 2px solid #000;
-						}
-					}
+      &__submit {
+        padding: 6px 35px;
+        background-color: $primary-white;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 2px solid $primary-white;
+        margin: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-out;
 
-					textarea {
-						height: 100px;
-					}
+        &:hover {
+          background-color: $main-color;
+          transition: background-color 0.3s ease-out;
+        }
+      }
+    }
 
-					.--error {
-						border-bottom: 2px solid red;
-					}
-				}
-			}
+    &__socials {
+      width: 100%;
+      padding: 20px;
+      max-width: 420px;
+      @include flex(space-evenly);
 
-			&__reset {
-				padding: 6px 35px;
-				background: #fff;
-				text-transform: uppercase;
-				font-weight: bold;
-				border: 2px solid #fff;
-				margin: 30px;
-				cursor: pointer;
+      &__social {
+        width: 54px;
+        height: 54px;
+        font-size: 1.7rem;
+        border-radius: 10px;
+        @include flex;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        cursor: pointer;
+        color: $primary-white;
 
-				&:hover {
-					background: $main-color;
-					transition: 0.3s ease-out;
-				}
-			}
-		}
+        &::after {
+          @include pseudo(200%, 123%, -150%, $primary-white, -1);
+          height: 160%;
+          transform: rotate(-57deg);
+          animation: socialOut 0.4s ease-in-out both;
+        }
 
-		&__socials {
-			width: 100%;
-			padding: 20px 40px;
-			@include flex(space-evenly, center);
+        &:hover::after {
+          animation: socialIn 0.6s ease-in-out both;
+        }
+      }
 
-			&__social {
-				width: 54px;
-				height: 54px;
-				font-size: 1.7em;
-				border-radius: 10px;
-				@include flex(center, center);
-				position: relative;
-				z-index: 2;
-				overflow: hidden;
-				cursor: pointer;
-				color: #fff;
+      &__facebook {
+        background-color: #4267b2;
 
-				&::after {
-					@include pseudo(200%, 123%, -150%, #fff, -2);
-					height: 160%;
-					transform: rotate(-57deg);
-				}
+        &:hover {
+          color: #4267b2;
+        }
+      }
 
-				&:hover::after {
-					animation: social 0.7s ease-in-out both;
-				}
-			}
+      &__twitter {
+        background-color: #1da0f1;
 
-			&__facebook {
-				background-color: #4267b2;
+        &:hover {
+          color: #1da0f1;
+        }
+      }
 
-				&:hover {
-					color: #4267b2;
-				}
-			}
+      &__instagram {
+        background-color: #e1306c;
 
-			&__twitter {
-				background-color: #1da0f1;
+        &:hover {
+          color: #e1306c;
+        }
+      }
 
-				&:hover {
-					color: #1da0f1;
-				}
-			}
+      &__github {
+        background-color: #211f1f;
 
-			&__instagram {
-				background-color: #b43e88;
-
-				&:hover {
-					color: #b43e88;
-				}
-			}
-
-			&__google {
-				background-color: #eb4336;
-
-				&:hover {
-					color: #eb4336;
-				}
-			}
-		}
-	}
-	&__copyright {
-		color: #fff;
-	}
+        &:hover {
+          color: #211f1f;
+        }
+      }
+    }
+  }
+  &__copyright {
+    color: $primary-white;
+  }
 }
 
 @media all and (min-width: 860px) {
-	.contact {
-		.info__socials {
-			margin-bottom: 20px;
-			margin-top: 40px;
+  .contact {
+    .info {
+      padding: 20px 60px;
+      &__form {
+        &__input {
+          max-width: 550px;
+          font-size: 1.1rem;
+          padding: 12px;
+        }
 
-			&__social {
-				transform: scale(1.4);
-			}
-		}
-	}
+        &__textarea {
+          height: 150px;
+        }
 
-	.info__form__inputs__message {
-		height: 150px;
-	}
+        &__submit {
+          font-size: 0.95rem;
+          padding: 8px 35px;
+        }
+      }
+
+      &__socials {
+        margin-bottom: 20px;
+        margin-top: 40px;
+        max-width: 600px;
+        &__social {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
 }
 
-@media all and (min-width: 1124px) {
-	.contact {
-		.info {
-			padding: 20px 60px;
+@keyframes socialIn {
+  0% {
+    top: 123%;
+    left: -180%;
+  }
 
-			&__form__inputs {
-				width: 60%;
+  75% {
+    top: -123%;
+    left: 20%;
+  }
 
-				&__label {
-					input,
-					textarea {
-						width: 70%;
-						font-size: 1.1em;
-						padding: 12px;
-					}
-				}
+  100% {
+    top: -10%;
+    left: -50%;
+  }
+}
 
-				&__reset {
-					font-size: 1.1em;
-				}
-			}
+@keyframes socialOut {
+  0% {
+    top: -10%;
+    left: -50%;
+  }
 
-			&__socials {
-				width: 46%;
-			}
-		}
-	}
+  25% {
+    top: -123%;
+    left: 20%;
+  }
+
+  100% {
+    top: 123%;
+    left: -180%;
+  }
 }

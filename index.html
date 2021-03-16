@@ -351,64 +351,97 @@
       <div class="header">
         <h2 class="header__title">kontakt</h2>
       </div>
-      <div class="info">
-        <div class="info__form">
-          <form class="info__form__inputs">
-            <label class="info__form__inputs__label">
-              <input
-                type="text"
-                placeholder="imię"
-                class="info__form__inputs__name"
-              /><br />
-            </label>
-            <label class="info__form__inputs__label">
-              <input
-                type="text"
-                class="info__form__inputs__email"
-                placeholder="E-mail"
-              /><br />
-            </label>
-            <label class="info__form__inputs__label">
-              <textarea
-                class="info__form__inputs__message"
-                placeholder="wiadomość"
-              ></textarea>
-            </label>
-          </form>
+      <article class="info">
+        <form
+          class="info__form"
+          action="https://formspree.io/f/xknpdenn"
+          method="POST"
+        >
+          <label class="info__form__label" for="name"
+            ><span class="sr-only">imię</span></label
+          >
+          <input
+            type="text"
+            placeholder="imię"
+            class="info__form__input"
+            id="name"
+            required
+            name="name"
+          />
+          <label class="info__form__label" for="email"
+            ><span class="sr-only">email</span></label
+          >
+          <input
+            type="text"
+            class="info__form__input"
+            placeholder="e-mail"
+            id="email"
+            required
+            name="email"
+          />
 
-          <button class="info__form__reset">wyślij</button>
-        </div>
+          <input type="text" name="_gotcha" style="display: none" />
+          <label class="info__form__label" for="message"
+            ><span class="sr-only">wiadomość</span></label
+          >
+          <textarea
+            class="info__form__input info__form__textarea"
+            placeholder="wiadomość"
+            id="message"
+            name="message"
+            required
+          ></textarea>
 
-        <div class="info__socials">
-          <a href="https://www.facebook.com/profile.php?id=100014067669589">
-            <div class="info__socials__social info__socials__facebook">
+          <button class="info__form__submit">wyślij</button>
+        </form>
+
+        <article class="info__socials">
+          <a
+            href="https://www.facebook.com/profile.php?id=100014067669589"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="sr-only">facebook</span>
+            <span class="info__socials__social info__socials__facebook">
               <i class="fab fa-facebook-f"></i>
-            </div>
+            </span>
           </a>
-          <a href="https://twitter.com/Bartuninho">
-            <div class="info__socials__social info__socials__twitter">
+          <a
+            href="https://twitter.com/Bartuninho"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="sr-only">twitter</span>
+            <span class="info__socials__social info__socials__twitter">
               <i class="fab fa-twitter"></i>
-            </div>
+            </span>
           </a>
-          <a href="https://www.instagram.com/bartoszzagrodzki">
-            <div class="info__socials__social info__socials__instagram">
+          <a
+            href="https://www.instagram.com/bartoszzagrodzki"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="sr-only">instagram</span>
+            <span class="info__socials__social info__socials__instagram">
               <i class="fab fa-instagram"></i>
-            </div>
+            </span>
           </a>
-          <a href="mailto:bartzagr@gmail.com">
-            <div class="info__socials__social info__socials__google">
-              <i class="fab fa-google"></i>
-            </div>
+          <a href="https://github.com/Bartek532" rel="noopener" target="_blank">
+            <span class="sr-only">github</span>
+            <span class="info__socials__social info__socials__github">
+              <i class="fab fa-github"></i>
+            </span>
           </a>
-        </div>
-      </div>
-      <div class="contact__copyright">2020 &copy; All rights reserved.</div>
+        </article>
+      </article>
+      <span class="contact__copyright"
+        >Copyright &copy; 2021 - Bartosz Zagrodzki</span
+      >
     </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/typer.js"></script>
     <script src="./js/skills.js"></script>
-    <script src="./js/validate.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/mobile_menu.js"></script>
   </body>

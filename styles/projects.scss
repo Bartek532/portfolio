@@ -1,5 +1,5 @@
 .work {
-  @include flex(center, center);
+  @include flex;
   flex-flow: column wrap;
   padding-bottom: 30px;
   width: 100%;
@@ -34,7 +34,7 @@
 
     .project {
       width: 75vw;
-      max-width: 300px;
+      max-width: 310px;
       height: 75vw;
       max-height: 310px;
       margin: 30px;

@@ -1,33 +1,4 @@
 @charset "UTF-8";
-@-webkit-keyframes social {
-  0% {
-    top: 123%;
-    left: -180%;
-  }
-  75% {
-    top: -123%;
-    left: 20%;
-  }
-  100% {
-    top: -10%;
-    left: -50%;
-  }
-}
-@keyframes social {
-  0% {
-    top: 123%;
-    left: -180%;
-  }
-  75% {
-    top: -123%;
-    left: 20%;
-  }
-  100% {
-    top: -10%;
-    left: -50%;
-  }
-}
-
 .nav {
   position: fixed;
   width: 100%;
@@ -75,7 +46,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #000;
+  background-color: #000;
   border-radius: 50px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -130,7 +101,7 @@
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: #fff;
+  background-color: #fff;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -223,7 +194,7 @@
     position: static;
     -webkit-transform: translate(0);
             transform: translate(0);
-    background: transparent;
+    background-color: transparent;
   }
   .nav .menu__links {
     display: -webkit-box;
@@ -662,7 +633,7 @@
   width: 85%;
   max-width: 550px;
   text-align: center;
-  background: #fff;
+  background-color: #fff;
   position: relative;
   -webkit-box-shadow: white 0px 5px 15px;
           box-shadow: white 0px 5px 15px;
@@ -794,7 +765,7 @@
 
 .work .projects .project {
   width: 75vw;
-  max-width: 300px;
+  max-width: 310px;
   height: 75vw;
   max-height: 310px;
   margin: 30px;
@@ -892,7 +863,7 @@
   padding-left: 25px;
   margin: 0;
   margin-top: 8px;
-  list-style-image: url("../images/logo.png");
+  list-style-image: url("../images/list.png");
 }
 
 .work .projects .project__description__technologies ul li {
@@ -916,7 +887,7 @@
 
 .work .projects .project__description__buttons button {
   border: 0 none;
-  background: #fff;
+  background-color: #fff;
   padding: 10px 30px;
   border-radius: 5px;
   margin: 8px;
@@ -930,7 +901,7 @@
 }
 
 .work .projects .project__description__buttons button:hover {
-  background: #f7ca18;
+  background-color: #f7ca18;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
@@ -1022,82 +993,50 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  width: 100%;
-}
-
-.contact .info__form__inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
   margin-top: 30px;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.contact .info__form__inputs__label {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact .info__form__inputs__label input,
-.contact .info__form__inputs__label textarea {
+.contact .info__form__input {
   border: 0 none;
   width: 80%;
   margin: 7px;
   padding: 10px;
   text-transform: uppercase;
+  max-width: 375px;
 }
 
-.contact .info__form__inputs__label input:focus,
-.contact .info__form__inputs__label textarea:focus {
-  border-bottom: 2px solid #000;
-}
-
-.contact .info__form__inputs__label textarea {
-  height: 100px;
-}
-
-.contact .info__form__inputs__label .--error {
+.contact .info__form__input--error {
   border-bottom: 2px solid red;
 }
 
-.contact .info__form__reset {
+.contact .info__form__textarea {
+  height: 100px;
+}
+
+.contact .info__form__submit {
   padding: 6px 35px;
-  background: #fff;
+  background-color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   border: 2px solid #fff;
   margin: 30px;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
-.contact .info__form__reset:hover {
-  background: #f7ca18;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+.contact .info__form__submit:hover {
+  background-color: #f7ca18;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
 .contact .info__socials {
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px;
+  max-width: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,7 +1051,7 @@
 .contact .info__socials__social {
   width: 54px;
   height: 54px;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1124,7 +1063,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
   cursor: pointer;
   color: #fff;
@@ -1138,15 +1077,17 @@
   width: 200%;
   height: 100%;
   background: #fff;
-  z-index: -2;
+  z-index: -1;
   height: 160%;
   -webkit-transform: rotate(-57deg);
           transform: rotate(-57deg);
+  -webkit-animation: socialOut 0.4s ease-in-out both;
+          animation: socialOut 0.4s ease-in-out both;
 }
 
 .contact .info__socials__social:hover::after {
-  -webkit-animation: social 0.7s ease-in-out both;
-          animation: social 0.7s ease-in-out both;
+  -webkit-animation: socialIn 0.6s ease-in-out both;
+          animation: socialIn 0.6s ease-in-out both;
 }
 
 .contact .info__socials__facebook {
@@ -1166,19 +1107,19 @@
 }
 
 .contact .info__socials__instagram {
-  background-color: #b43e88;
+  background-color: #e1306c;
 }
 
 .contact .info__socials__instagram:hover {
-  color: #b43e88;
+  color: #e1306c;
 }
 
-.contact .info__socials__google {
-  background-color: #eb4336;
+.contact .info__socials__github {
+  background-color: #211f1f;
 }
 
-.contact .info__socials__google:hover {
-  color: #eb4336;
+.contact .info__socials__github:hover {
+  color: #211f1f;
 }
 
 .contact__copyright {
@@ -1186,37 +1127,89 @@
 }
 
 @media all and (min-width: 860px) {
+  .contact .info {
+    padding: 20px 60px;
+  }
+  .contact .info__form__input {
+    max-width: 550px;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+  .contact .info__form__textarea {
+    height: 150px;
+  }
+  .contact .info__form__submit {
+    font-size: 0.95rem;
+    padding: 8px 35px;
+  }
   .contact .info__socials {
     margin-bottom: 20px;
     margin-top: 40px;
+    max-width: 600px;
   }
   .contact .info__socials__social {
     -webkit-transform: scale(1.4);
             transform: scale(1.4);
   }
-  .info__form__inputs__message {
-    height: 150px;
+}
+
+@-webkit-keyframes socialIn {
+  0% {
+    top: 123%;
+    left: -180%;
+  }
+  75% {
+    top: -123%;
+    left: 20%;
+  }
+  100% {
+    top: -10%;
+    left: -50%;
   }
 }
 
-@media all and (min-width: 1124px) {
-  .contact .info {
-    padding: 20px 60px;
+@keyframes socialIn {
+  0% {
+    top: 123%;
+    left: -180%;
   }
-  .contact .info__form__inputs {
-    width: 60%;
+  75% {
+    top: -123%;
+    left: 20%;
   }
-  .contact .info__form__inputs__label input,
-  .contact .info__form__inputs__label textarea {
-    width: 70%;
-    font-size: 1.1em;
-    padding: 12px;
+  100% {
+    top: -10%;
+    left: -50%;
   }
-  .contact .info__form__inputs__reset {
-    font-size: 1.1em;
+}
+
+@-webkit-keyframes socialOut {
+  0% {
+    top: -10%;
+    left: -50%;
   }
-  .contact .info__socials {
-    width: 46%;
+  25% {
+    top: -123%;
+    left: 20%;
+  }
+  100% {
+    top: 123%;
+    left: -180%;
+  }
+}
+
+@keyframes socialOut {
+  0% {
+    top: -10%;
+    left: -50%;
+  }
+  25% {
+    top: -123%;
+    left: 20%;
+  }
+  100% {
+    top: 123%;
+    left: -180%;
   }
 }
 
