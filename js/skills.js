@@ -1,3 +1,79 @@
+const swiper = new Swiper(".swiper-container", {
+  slidesPerView: 4,
+  spaceBetween: 10,
+  slidesPerGroup: 4,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    560: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      slidesPerGroup: 5,
+    },
+    650: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      slidesPerGroup: 4,
+    },
+    800: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+      slidesPerGroup: 5,
+    },
+    1000: {
+      slidesPerView: 6,
+      spaceBetween: 25,
+      slidesPerGroup: 6,
+    },
+  },
+});
+/*const arrowLeft = document.querySelector(".grid__controls__btn--left");
+const arrowRight = document.querySelector(".grid__controls__btn--right");
+
+const technologiesList = document.querySelector(".grid__technologies");
+let scrollValue = 0;
+const marginBetweenElements = 20;
+
+arrowRight.addEventListener("click", () => {
+  const {
+    width: elementWidth,
+  } = technologiesList.children[0].getBoundingClientRect();
+  const { width: listWidth } = technologiesList.getBoundingClientRect();
+
+  const maxScroll = -(
+    technologiesList.children.length * (elementWidth + marginBetweenElements) -
+    listWidth / 2 -
+    elementWidth / 2
+  );
+
+  scrollValue =
+    scrollValue - elementWidth - marginBetweenElements < maxScroll
+      ? maxScroll
+      : scrollValue - elementWidth - marginBetweenElements;
+
+  technologiesList.style.transform = `translateX(${scrollValue}px)`;
+});
+
+arrowLeft.addEventListener("click", () => {
+  const {
+    width: elementWidth,
+  } = technologiesList.children[0].getBoundingClientRect();
+  const { width: listWidth } = technologiesList.getBoundingClientRect();
+
+  const maxScroll = listWidth / 2 - elementWidth / 2 - marginBetweenElements;
+
+  scrollValue =
+    scrollValue + elementWidth + marginBetweenElements + 10 > maxScroll
+      ? maxScroll
+      : scrollValue + elementWidth + marginBetweenElements;
+  technologiesList.style.transform = `translateX(${scrollValue}px)`;
+});
+*?
+
+/*
 const skills = [
   {
     name: "HTML",
@@ -59,3 +135,4 @@ function changeInfo(id) {
   document.querySelector(".info__desc__text").innerHTML = newInfo.description;
   document.querySelector(".info__desc__title").innerHTML = newInfo.name;
 }
+*/

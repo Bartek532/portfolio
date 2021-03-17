@@ -16,19 +16,16 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Bartosz Zagrodzki | Portfolio</title>
   </head>
 
   <body>
     <nav class="nav">
-      <a
-        class="nav__logo"
-        href="https://github.com/Bartek532"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="./images/logo.svg" alt="bear" class="nav__logo__image" />
-      </a>
       <div class="nav__hamburger">
         <span class="nav__hamburger__item"></span>
         <span class="nav__hamburger__item"></span>
@@ -58,6 +55,14 @@
     </nav>
 
     <section class="home" id="home">
+      <a
+        class="home__logo"
+        href="https://github.com/Bartek532"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="./images/logo.svg" alt="bear" class="home__logo__image" />
+      </a>
       <div class="home__text" data-aos="fade-right">
         <h1 class="home__text__name"></h1>
         <h2 class="home__text__title">front-end developer</h2>
@@ -110,30 +115,104 @@
       <div class="header">
         <h2 class="header__title">umiejętności</h2>
       </div>
-      <!--
+
       <div class="info">
-        <ul class="info__grid" data-aos="fade-right">
-          <li class="info__grid__field">
-            <div
-              class="info__grid__field__hex HTML"
-              onclick="changeInfo('HTML')"
-            >
-              <span aria-label="html" class="fab fa-html5"></span>
-            </div>
-          </li>
-          <li class="info__grid__field">
-            <div class="info__grid__field__hex CSS" onclick="changeInfo('CSS')">
+        <div class="info__description" data-aos="fade-up">
+          <h3 class="info__description__title">Moje umiejętności</h3>
+          <div class="info__description__text">
+            Chcesz wiedzieć, co tak naprawdę potrafię? Skorzystaj z menu,
+            wybierając technologię &#128513;
+          </div>
+        </div>
+
+        <div class="grid swiper-container">
+          <ul class="grid__technologies swiper-wrapper">
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-html5"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-css3-alt"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-js"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fas fa-database"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-sass"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-vuejs"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-node-js"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-npm"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-html5"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-html5"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-html5"></i>
+              </button>
+            </li>
+
+            <li class="grid__technologies__technology swiper-slide">
+              <button class="grid__technologies__technology__btn">
+                <i class="fab fa-html5"></i>
+              </button>
+            </li>
+
+            <!--
+          <li class="grid__grid__field">
+            <div class="grid__grid__field__hex CSS" onclick="changegrid('CSS')">
               <span aria-label="css" class="fab fa-css3-alt"></span>
             </div>
           </li>
-          <li class="info__grid__field">
-            <div class="info__grid__field__hex JS" onclick="changeInfo('JS')">
+          <li class="grid__grid__field">
+            <div class="grid__grid__field__hex JS" onclick="changegrid('JS')">
               <span aria-label="js" class="fab fa-js"></span>
             </div>
           </li>
-          <li class="info__grid__field">
+          <li class="grid__grid__field">
             <div
-              class="info__grid__field__hex MySQL"
+              class="grid__grid__field__hex MySQL"
               onclick="changeInfo('PostgreSQL')"
             >
               <span aria-label="database" class="fas fa-database"></span>
@@ -173,16 +252,21 @@
               <span aria-label="npm" class="fab fa-npm"></span>
             </div>
           </li>
-        </ul>
-        <div class="info__desc" data-aos="fade-up">
-          <h3 class="info__desc__title">Moje umiejętności</h3>
-          <div class="info__desc__text">
-            Chcesz wiedzieć, co tak naprawdę potrafię? Skorzystaj z menu,
-            wybierając technologię :)
+          --></ul>
+          <div class="swiper-pagination"></div>
+
+          <!--
+          <div class="grid__controls">
+            <button class="grid__controls__btn grid__controls__btn--left">
+              left
+            </button>
+            <button class="grid__controls__btn grid__controls__btn--right">
+              right
+            </button>
           </div>
+          -->
         </div>
       </div>
-      -->
     </section>
 
     <section class="work" id="projects">
@@ -439,6 +523,7 @@
       >
     </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./js/typer.js"></script>
     <script src="./js/skills.js"></script>

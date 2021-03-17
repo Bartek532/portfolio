@@ -43,6 +43,10 @@ footer {
   padding-top: 40px;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: $primary-white !important;
+}
+
 @media all and (min-width: 600px) {
   .home,
   .about,

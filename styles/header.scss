@@ -4,6 +4,20 @@
   text-transform: uppercase;
   position: relative;
 
+  &__logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 15px;
+    z-index: 999;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &__text {
     border-left: 3px solid $primary-white;
     padding-left: 20px;
@@ -71,6 +85,13 @@
       font-size: 3.5rem;
       bottom: -20px;
     }
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .home__logo {
+    top: 12px;
+    right: 23px;
   }
 }
 

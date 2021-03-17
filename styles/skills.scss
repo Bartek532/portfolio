@@ -1,6 +1,6 @@
 .skills {
   background-color: $main-color;
-  @include flex(center, center);
+  @include flex;
   flex-flow: column wrap;
 
   .header {
@@ -8,7 +8,7 @@
     position: relative;
 
     &::after {
-      @include pseudo(60%, 0, 50%, #fff, 2);
+      @include pseudo(60%, 0, 50%, $primary-white, 2);
     }
 
     &__title {
@@ -22,176 +22,102 @@
   }
 
   .info {
-    @include flex(center, center);
+    @include flex;
     flex-flow: column wrap;
-
-    &__grid {
-      position: relative;
-      width: 80%;
-      margin: 20px auto;
-      padding: 0;
-
-      &__field {
-        list-style-type: none;
-        position: relative;
-        float: left;
-        width: 27.85714285714286%;
-        padding: 0 0 32.16760145166612% 0;
-        transform: rotate(-60deg) skewY(30deg);
-        overflow: hidden;
-        visibility: hidden;
-
-        * {
-          visibility: visible;
-        }
-
-        &__hex {
-          @include pseudo(100%, 0, 0, #fff);
-          transform: skewY(-30deg) rotate(60deg);
-          overflow: hidden;
-          font-size: 3em;
-          cursor: pointer;
-          @include flex(center, center);
-
-          &:hover {
-            opacity: 0.5;
-            transition: 0.3s;
-          }
-
-          .fa-html5 {
-            color: #e44d26;
-          }
-
-          .fa-css3-alt {
-            color: #379ad6;
-          }
-
-          .fa-js {
-            color: #f0db4f;
-          }
-
-          .fa-database {
-            color: #035976;
-          }
-
-          .fa-sass {
-            color: #ce679a;
-          }
-
-          .fa-vuejs {
-            color: #3fb984;
-          }
-
-          .fa-npm {
-            color: #d60000;
-          }
-
-          .fa-node-js {
-            color: #6da75d;
-          }
-        }
-
-        &--active {
-          opacity: 0.5;
-          transition: 0.3s;
-        }
-
-        &:nth-child(3n + 2) {
-          margin: 0 1%;
-        }
-
-        &:nth-child(6n + 4),
-        &:nth-child(6n + 5),
-        &:nth-child(6n + 6) {
-          margin-top: -6.9285714285%;
-          margin-bottom: -6.9285714285%;
-          transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        }
-
-        &:nth-child(6n + 4) {
-          margin-left: 0.5%;
-        }
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-
-    &__desc {
-      margin: 60px 30px 10px 30px;
-      padding: 30px 20px;
-      border-radius: 5px;
+    &__description {
+      padding: 30px;
+      border-radius: 16px;
       width: 85%;
       max-width: 550px;
       text-align: center;
-      background-color: #fff;
-      position: relative;
-      box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+      background-color: $primary-white;
+      box-shadow: 0 0 17px 0 rgba(#000, 0.4);
+      margin: 20px 0;
 
       &__title {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
       }
     }
-  }
-}
 
-@media all and (min-width: 600px) {
-  .skills .info .info__grid {
-    font-size: 1.4em;
-    width: 60vw;
-  }
+    .grid {
+      width: 85vw;
+      max-width: 700px;
+      position: relative;
+      @include flex;
 
-  .skills .info .info__desc {
-    width: 50vw;
-    padding: 40px;
-    font-size: 1.2em;
-  }
-}
+      &__technologies {
+        width: 100%;
+        list-style-type: none;
+        margin: 30px 0 40px 0;
+        padding: 0;
+        transition: transform 0.3s;
 
-@media all and (min-width: 1000px) {
-  .skills {
-    .info {
-      @include flex(space-between, center);
-      flex-flow: row-reverse nowrap;
-      padding: 60px 80px;
+        &__technology {
+          @include flex;
 
-      .info__grid {
-        width: 37vw;
-      }
+          &__btn {
+            border: 0 none;
+            font-size: 1.8rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: $primary-white;
+            .fa-html5 {
+              color: #e44d26;
+            }
 
-      .info__desc {
-        margin-right: 140px;
-        font-size: 1.1em;
-        padding: 40px;
-        width: 35vw;
+            .fa-css3-alt {
+              color: #379ad6;
+            }
 
-        .info__title {
-          font-size: 1.5em;
+            .fa-js {
+              color: #f0db4f;
+            }
+
+            .fa-database {
+              color: #035976;
+            }
+
+            .fa-sass {
+              color: #ce679a;
+            }
+
+            .fa-vuejs {
+              color: #3fb984;
+            }
+
+            .fa-npm {
+              color: #d60000;
+            }
+
+            .fa-node-js {
+              color: #6da75d;
+            }
+          }
         }
       }
     }
   }
 }
 
-@media all and (min-width: 1365px) {
-  .skills .info .info__desc {
-    margin-right: 180px;
-  }
-  .skills .info .info__grid {
-    width: 30vw;
-  }
-}
-
-@media all and (min-width: 1865px) {
-  .skills .info .info__grid {
-    font-size: 2em;
-  }
-
-  .skills .info .info__desc {
-    width: 30vw;
-    padding: 70px 100px;
+@media all and (min-width: 650px) {
+  .skills .info .grid {
+    &__technologies {
+      margin: 40px 0;
+      &__technology {
+        &__btn {
+          width: 100px;
+          height: 100px;
+          font-size: 3rem;
+        }
+      }
+    }
   }
 }

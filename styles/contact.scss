@@ -41,6 +41,11 @@
         text-transform: uppercase;
         max-width: 375px;
 
+        &:focus {
+          outline: 0 none;
+          border-bottom: 3px solid #000;
+        }
+
         &--error {
           border-bottom: 2px solid red;
         }
