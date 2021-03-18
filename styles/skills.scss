@@ -29,7 +29,6 @@
       border-radius: 16px;
       width: 85%;
       max-width: 550px;
-      text-align: center;
       background-color: $primary-white;
       box-shadow: 0 0 17px 0 rgba(#000, 0.4);
       margin: 20px 0;
@@ -38,6 +37,7 @@
         font-size: 1.1rem;
         margin-top: 0;
         text-transform: uppercase;
+        text-align: center;
       }
 
       &__text {
@@ -48,7 +48,7 @@
 
     .grid {
       width: 85vw;
-      max-width: 700px;
+      max-width: 680px;
       position: relative;
       @include flex;
 
@@ -64,41 +64,69 @@
 
           &__btn {
             border: 0 none;
-            font-size: 1.8rem;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: $primary-white;
-            .fa-html5 {
-              color: #e44d26;
+            font-size: 2rem;
+            width: 65px;
+            height: 65px;
+            border-radius: 12px;
+            cursor: pointer;
+            color: $primary-white;
+            @include flex;
+
+            &:focus {
+              outline: 0 none;
+              border: 2px solid $primary-white;
             }
 
-            .fa-css3-alt {
-              color: #379ad6;
+            * {
+              pointer-events: none;
             }
 
-            .fa-js {
-              color: #f0db4f;
+            &.html {
+              background-color: #e44d26;
             }
 
-            .fa-database {
-              color: #035976;
+            &.css {
+              background-color: #379ad6;
             }
 
-            .fa-sass {
-              color: #ce679a;
+            &.js {
+              background-color: #f0db4f;
             }
 
-            .fa-vuejs {
-              color: #3fb984;
+            &.ts {
+              background-color: #007acc;
             }
 
-            .fa-npm {
-              color: #d60000;
+            &.vue {
+              background-color: #3fb984;
             }
 
-            .fa-node-js {
-              color: #6da75d;
+            &.react {
+              background-color: #61dbfb;
+            }
+
+            &.sass {
+              background-color: #ce679a;
+            }
+
+            &.next {
+              background-color: #000;
+            }
+
+            &.node {
+              background-color: #6da75d;
+            }
+
+            &.postgresql {
+              background-color: #035976;
+            }
+
+            &.mongo {
+              background-color: #4db33d;
+            }
+
+            &.git {
+              background-color: #f1502f;
             }
           }
         }
@@ -108,14 +136,30 @@
 }
 
 @media all and (min-width: 650px) {
-  .skills .info .grid {
-    &__technologies {
-      margin: 40px 0;
-      &__technology {
-        &__btn {
-          width: 100px;
-          height: 100px;
-          font-size: 3rem;
+  .skills .info {
+    &__description {
+      padding: 35px;
+      &__title {
+        font-size: 1.2rem;
+      }
+
+      &__text {
+        font-size: 0.95rem;
+      }
+    }
+    .grid {
+      &__technologies {
+        margin: 40px 0;
+        &__technology {
+          &__btn {
+            width: 85px;
+            height: 85px;
+            font-size: 2.9rem;
+
+            img {
+              transform: translateX(0) scale(1.25);
+            }
+          }
         }
       }
     }

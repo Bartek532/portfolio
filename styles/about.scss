@@ -49,12 +49,25 @@
       width: 100%;
       max-width: 550px;
       border-left: 3px solid $main-color;
-      line-height: 1.6rem;
 
       &__title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: bold;
-        margin: 8px 0 25px 0;
+        margin: 5px 0 15px 0;
+      }
+      &__text {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+        text-align: justify;
+        &__link {
+          text-decoration: underline;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
   }
@@ -69,6 +82,15 @@
 
     &__description {
       margin: 0;
+
+      &__title {
+        font-size: 2.2rem;
+      }
+
+      &__text {
+        line-height: 1.85rem;
+        font-size: 1rem;
+      }
     }
   }
 }

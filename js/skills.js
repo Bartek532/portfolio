@@ -1,3 +1,102 @@
+const skills = [
+  {
+    id: "html",
+    name: "HTML",
+    description:
+      "Podczas pisania kodu, zawsze staram się, by był on zgodny z najnowszymi standardami. Używam semantycznej składni zgodnej z HTML-em w wersji 5.",
+  },
+  {
+    id: "css",
+    name: "CSS",
+    description:
+      "Tworzę responsywne strony internetowe, używam reguły @media, animacji, technik układania siatki - znam techniki flexbox oraz grid. Opanowałem również preprocesory takie jak np. SCSS",
+  },
+  {
+    id: "js",
+    name: "JavaScript",
+    description:
+      "Umiem posługiwać się tym językiem, znam składnię ES6+. Niestraszny jest dla mnie asynchroniczny kod, używam array methods oraz destrukturyzacji. Moje strony są interaktywne i przyjemne w użytkowaniu.",
+  },
+  {
+    id: "ts",
+    name: "TypeScript",
+    description:
+      "W swoich projektach najczęściej używam nadzbioru języka JavaScript: TypeScript-u. Dzięki typowaniu pozwala on pisać kod, który jest łatwiejszy do zrozumienia, a ponadto daje możliwość wychwytywania błędów już w fazie transpilacji, co znacząco wpływa na czas debugowania.",
+  },
+  {
+    id: "vue",
+    name: "Vue",
+    description:
+      "Obok Angulara i Reacta jeden z najbardziej użytecznych frameworków języka JavaScript. Osobiście uwielbiam łatwość jego użytku oraz niekończące się możliwości. Uefektywnia on proces tworzenia zaawansowancyh projektów, a przy tym jego kod wcale nie staje się skomplikowany.",
+  },
+  {
+    id: "react",
+    name: "React",
+    description:
+      "Obecnie najpopularniejszy framework języka JavaScript. Poznałem go ze względu na ogrom możliwości, jak i mocno rozbudowane community. W połączeniu z TypeScript-em tworzy on znakomitą bazę do budowy skomplikowanych aplikacji internetowych. Ogranicza nas tylko wyobraźnia! ",
+  },
+  {
+    id: "sass",
+    name: "SCSS",
+    description:
+      "Preprocesory CSS są bardzo użyteczne i potrafią znacząco ułatwić pracę. Jednym z największych plusów SCSS-a jest pełna zgodność jego składni z czystym CSS-em, poza tym umożliwia on znacznie szybszy import plików oraz większą przejrzystość kodu.",
+  },
+  {
+    id: "next",
+    name: "Next.js",
+    description:
+      "Obecnie moja ulubiona technologia front-endowa. Rozwiązuje problemy React-a, a przy tym wprowadza swoje, znakomite rozwiązania. Przy czym kod aplikacji wcale nie staje się bardziej skomplikowany, a wręcz przeciwnie! Czego chcieć więcej?",
+  },
+  {
+    id: "node",
+    name: "Node.js",
+    description:
+      "Środowisko umożliwiające korzystanie z języka JavaScript po stronie serwera - czyż nie brzmi to pięknie? Swobodnie czuję się we frameworku Express.js, ale ciągle poznaję kolejne użyteczne narzędzia i biblioteki, by moje aplikacje były jak najlepsze.",
+  },
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    description:
+      "Poznałem ten język, ponieważ umiejętność zarządzania bazami danych jest w dzisiejszych czasach na wagę złota. W tym momencie jego składnia nie ma dla mnie zbyt wielu tajemnic. Sprawnie radzę sobie również z ORM-ami - moim ulubionym jest Prisma, m.in. ze względu na wspaniałą obsługę TypeScript-u.",
+  },
+  {
+    id: "mongo",
+    name: "mongoDB",
+    description:
+      "Uznałem, że warto umieć posługiwać się zarówno relacyjnymi, jak i tymi nierelacyjnymi bazami danych. Mój wybór padł na MongoDB - bazę opartą na dokumentach. Choć ma swoje wady, w parze z Node.js działa naprawdę świetnie i znajduje zastosowanie w wielu różnych projektach.",
+  },
+
+  {
+    id: "git",
+    name: "Git",
+    description:
+      "Git oraz Github to znakomite narzędzia do pracy w zepole, ale nie tylko - umożliwiają one między innymi możliwość przedstawienia własnych projektów w łatwy i czytelny sposób.",
+  },
+];
+
+const technologiesList = document.querySelector(".grid__technologies");
+
+technologiesList.addEventListener("click", e => {
+  if (e.target.classList.contains("grid__technologies__technology__btn")) {
+    return changeActiveTechnology(e.target.dataset.tech);
+  }
+});
+
+const changeActiveTechnology = tech => {
+  const technologyBoxTitle = document.querySelector(
+    ".skills .info__description__title"
+  );
+  const technologyBoxDescription = document.querySelector(
+    ".skills .info__description__text"
+  );
+
+  const activeTech = skills.find(({ id }) => id === tech);
+
+  technologyBoxTitle.innerText = activeTech.name;
+  technologyBoxDescription.innerText = activeTech.description;
+};
+
+//Swiper
 const swiper = new Swiper(".swiper-container", {
   slidesPerView: 4,
   spaceBetween: 10,
@@ -30,109 +129,3 @@ const swiper = new Swiper(".swiper-container", {
     },
   },
 });
-/*const arrowLeft = document.querySelector(".grid__controls__btn--left");
-const arrowRight = document.querySelector(".grid__controls__btn--right");
-
-const technologiesList = document.querySelector(".grid__technologies");
-let scrollValue = 0;
-const marginBetweenElements = 20;
-
-arrowRight.addEventListener("click", () => {
-  const {
-    width: elementWidth,
-  } = technologiesList.children[0].getBoundingClientRect();
-  const { width: listWidth } = technologiesList.getBoundingClientRect();
-
-  const maxScroll = -(
-    technologiesList.children.length * (elementWidth + marginBetweenElements) -
-    listWidth / 2 -
-    elementWidth / 2
-  );
-
-  scrollValue =
-    scrollValue - elementWidth - marginBetweenElements < maxScroll
-      ? maxScroll
-      : scrollValue - elementWidth - marginBetweenElements;
-
-  technologiesList.style.transform = `translateX(${scrollValue}px)`;
-});
-
-arrowLeft.addEventListener("click", () => {
-  const {
-    width: elementWidth,
-  } = technologiesList.children[0].getBoundingClientRect();
-  const { width: listWidth } = technologiesList.getBoundingClientRect();
-
-  const maxScroll = listWidth / 2 - elementWidth / 2 - marginBetweenElements;
-
-  scrollValue =
-    scrollValue + elementWidth + marginBetweenElements + 10 > maxScroll
-      ? maxScroll
-      : scrollValue + elementWidth + marginBetweenElements;
-  technologiesList.style.transform = `translateX(${scrollValue}px)`;
-});
-*?
-
-/*
-const skills = [
-  {
-    name: "HTML",
-    description:
-      "Podczas pisania kodu, zawsze staram się, by był on zgodny z najnowszymi standardami. Używam składni zgodnej z HTML-em w wersji 5."
-  },
-  {
-    name: "CSS",
-    description:
-      "Tworzę responsywne strony internetowe, używam reguły @media, animacji, technik układania siatki - znam techniki flexbox oraz grid. Opanowałem również preprocesory takie jak SASS czy Less."
-  },
-  {
-    name: "JS",
-    description:
-      "Umiem posługiwać się tym językiem, znam składnię ES6+. Niestraszny jest dla mnie asynchroniczny kod, używam array methods oraz destrukturyzacji. Moje strony są interaktywne i przyjemne w użytkowaniu."
-  },
-  {
-    name: "PostgreSQL",
-    description:
-      "Poznałem ten język, ponieważ obsługa oraz umiejętność zarządzania bazami danych są w dzisiejszych czasach na wagę złota. W tym momencie jego składnia nie ma dla mnie zbyt wielu wyzwań. Sprawnie radzę sobie również z ORM-em jak np. Prisma."
-  },
-  {
-    name: "SCSS",
-    description:
-      "Preprocesory CSS są bardzo użyteczne i potrafią znacząco ułatwić pracę. Jednym z największych plusów SCSS-a jest pełna zgodność jego składni z czystym CSS-em, poza tym umożliwia on znacznie szybszy import plików oraz większą przejrzystość kodu."
-  },
-  {
-    name: "Vue",
-    description:
-      "Obok Angulara i Reacta jeden z najbardziej użytecznych frameworków języka JavaScript. Osobiście uwielbiam łatwość jego użytku oraz niekończące się możliwości. Umożliwia on tworzenie zaawansowancyh projektów, a przy tym jego kod wcale nie staje się skomplikwany."
-  },
-  {
-    name: "Github",
-    description:
-      "Git oraz Github to znakomite narzędzia do pracy w zepole, ale nie tylko - umożliwiają one między innymi możliwość pokazania własnych projektów w łatwy i czytelny sposób."
-  },
-  {
-    name: "Node.js",
-    description:
-      "Środowisko umożliwiające korzystanie z języka JavaScript po stronie serwera - czyż nie brzmi to pięknie? Jak na razie jestem w trakcie poznawania tej technologii, ponieważ w przyszłości chciałbym tworzyć dynamiczne aplikacje internetowe."
-  },
-  {
-    name: "NPM",
-    description:
-      "Jest to domyślny manager pakietów dla środowiska Node.js, choć może być także używany do zarządzania warstwą front-end aplikacji WWW. Umiejętność korzystania z niego jest często pomijana przez deweloperów, pomimo, tego że jest naprawdę ważna."
-  }
-];
-
-function changeInfo(id) {
-  const newInfo = skills.find(item => item.name == id);
-
-  const hexagons = document.querySelectorAll(".info__grid__field__hex");
-  for (const hex of hexagons) {
-    hex.classList.remove("info__grid__field__hex--active");
-    if (hex.classList.contains(`${id}`)) {
-      hex.classList.add("info__grid__field__hex--active");
-    }
-  }
-  document.querySelector(".info__desc__text").innerHTML = newInfo.description;
-  document.querySelector(".info__desc__title").innerHTML = newInfo.name;
-}
-*/

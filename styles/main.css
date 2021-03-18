@@ -439,13 +439,28 @@
   width: 100%;
   max-width: 550px;
   border-left: 3px solid #f7ca18;
-  line-height: 1.6rem;
 }
 
 .about .info__description__title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 8px 0 25px 0;
+  margin: 5px 0 15px 0;
+}
+
+.about .info__description__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+
+.about .info__description__text__link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.about .info__description__text__link:hover {
+  text-decoration: none;
 }
 
 @media all and (min-width: 1000px) {
@@ -457,6 +472,13 @@
   }
   .about .info__description {
     margin: 0;
+  }
+  .about .info__description__title {
+    font-size: 2.2rem;
+  }
+  .about .info__description__text {
+    line-height: 1.85rem;
+    font-size: 1rem;
   }
 }
 
@@ -529,7 +551,6 @@
   border-radius: 16px;
   width: 85%;
   max-width: 550px;
-  text-align: center;
   background-color: #fff;
   -webkit-box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.4);
@@ -540,6 +561,7 @@
   font-size: 1.1rem;
   margin-top: 0;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .skills .info__description__text {
@@ -549,7 +571,7 @@
 
 .skills .info .grid {
   width: 85vw;
-  max-width: 700px;
+  max-width: 680px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,53 +609,101 @@
 
 .skills .info .grid__technologies__technology__btn {
   border: 0 none;
-  font-size: 1.8rem;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: #fff;
+  font-size: 2rem;
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-html5 {
-  color: #e44d26;
+.skills .info .grid__technologies__technology__btn:focus {
+  outline: 0 none;
+  border: 2px solid #fff;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-css3-alt {
-  color: #379ad6;
+.skills .info .grid__technologies__technology__btn * {
+  pointer-events: none;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-js {
-  color: #f0db4f;
+.skills .info .grid__technologies__technology__btn.html {
+  background-color: #e44d26;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-database {
-  color: #035976;
+.skills .info .grid__technologies__technology__btn.css {
+  background-color: #379ad6;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-sass {
-  color: #ce679a;
+.skills .info .grid__technologies__technology__btn.js {
+  background-color: #f0db4f;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-vuejs {
-  color: #3fb984;
+.skills .info .grid__technologies__technology__btn.ts {
+  background-color: #007acc;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-npm {
-  color: #d60000;
+.skills .info .grid__technologies__technology__btn.vue {
+  background-color: #3fb984;
 }
 
-.skills .info .grid__technologies__technology__btn .fa-node-js {
-  color: #6da75d;
+.skills .info .grid__technologies__technology__btn.react {
+  background-color: #61dbfb;
+}
+
+.skills .info .grid__technologies__technology__btn.sass {
+  background-color: #ce679a;
+}
+
+.skills .info .grid__technologies__technology__btn.next {
+  background-color: #000;
+}
+
+.skills .info .grid__technologies__technology__btn.node {
+  background-color: #6da75d;
+}
+
+.skills .info .grid__technologies__technology__btn.postgresql {
+  background-color: #035976;
+}
+
+.skills .info .grid__technologies__technology__btn.mongo {
+  background-color: #4db33d;
+}
+
+.skills .info .grid__technologies__technology__btn.git {
+  background-color: #f1502f;
 }
 
 @media all and (min-width: 650px) {
+  .skills .info__description {
+    padding: 35px;
+  }
+  .skills .info__description__title {
+    font-size: 1.2rem;
+  }
+  .skills .info__description__text {
+    font-size: 0.95rem;
+  }
   .skills .info .grid__technologies {
     margin: 40px 0;
   }
   .skills .info .grid__technologies__technology__btn {
-    width: 100px;
-    height: 100px;
-    font-size: 3rem;
+    width: 85px;
+    height: 85px;
+    font-size: 2.9rem;
+  }
+  .skills .info .grid__technologies__technology__btn img {
+    -webkit-transform: translateX(0) scale(1.25);
+            transform: translateX(0) scale(1.25);
   }
 }
 
@@ -800,6 +870,7 @@
 
 .work .projects .project__description__technologies ul li {
   margin: 4px 0;
+  padding-left: 3px;
 }
 
 .work .projects .project__description__buttons {
