@@ -17,6 +17,7 @@ This is my own portfolio where I show my work. I'm constantly updating them, alt
 | [JavaScript](https://www.javascript.com) | Most powerful language to build websites |
 | [AOS](https://michalsnik.github.io/aos)  | Animate on scroll library                |
 | [Swiper](https://swiperjs.com)           | Useful library to create sliders         |
+| [Parcel](https://parceljs.org)           | Web application bundler                  |
 
 ## Performance 💨
 
@@ -28,7 +29,7 @@ This is my own portfolio where I show my work. I'm constantly updating them, alt
 
 git clone https://github.com/Bartek532/portfolio.git
 
-start index.html
+npm run start
 
 ```
 
