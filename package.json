@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">\r Portfolio 💼\r </h1>",
+  "main": "index.js",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bartek532/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Bartosz Zagrodzki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bartek532/portfolio/issues"
+  },
+  "homepage": "https://bartek532.github.io/portfolio"
+}
