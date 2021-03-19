@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "<h1 align=\"center\">\r Portfolio 💼\r </h1>",
   "main": "index.js",
@@ -8,6 +8,7 @@
     "sass": "^1.32.8"
   },
   "scripts": {
+    "start": "parcel index.html",
     "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
