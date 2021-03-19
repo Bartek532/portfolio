@@ -66,11 +66,3 @@ jspm_packages/
 
 *.tsbuildinfo
 .version
-apps/www/.next
-
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
