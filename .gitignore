@@ -1,12 +1,5 @@
 /node_modules
-.tmp
-.idea
-.idea/
-.DS_Store
-.env
-.version
-dist
-.history
+.cache
 
 # Logs
 logs
