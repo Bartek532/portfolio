@@ -24,7 +24,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #000;
+      background-color: $primary-black;
       border-radius: 50px;
       transition: 0.3s;
 
@@ -99,7 +99,7 @@
         transform-origin: 0% 0%;
         transform: scaleX(0);
         transition: transform 0.3s;
-        border-bottom: 2.5px solid #000;
+        border-bottom: 2.5px solid $primary-black;
       }
 
       &:hover::after {
@@ -144,7 +144,7 @@
 
           &::after {
             @include pseudo;
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid $primary-black;
           }
 
           &:hover::after,

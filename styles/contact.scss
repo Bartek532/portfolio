@@ -43,7 +43,7 @@
 
         &:focus {
           outline: 0 none;
-          border-bottom: 3px solid #000;
+          border-bottom: 3px solid $primary-black;
         }
 
         &--error {
@@ -79,10 +79,10 @@
       @include flex(space-evenly);
 
       &__social {
-        width: 54px;
-        height: 54px;
-        font-size: 1.7rem;
-        border-radius: 10px;
+        width: 62px;
+        height: 62px;
+        border-radius: 12px;
+        font-size: 1.9rem;
         @include flex;
         position: relative;
         z-index: 1;
@@ -166,7 +166,7 @@
         margin-top: 40px;
         max-width: 600px;
         &__social {
-          transform: scale(1.4);
+          transform: scale(1.35);
         }
       }
     }

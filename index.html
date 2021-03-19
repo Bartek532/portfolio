@@ -4,22 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles/main.css" type="text/css" />
+    <meta
+      name="description"
+      content="Hi! I'm Bartosz Zagrodzki and this is my own portfolio, where I show my projects, skills and many more. Enjoy!"
+    />
+    <link rel="stylesheet" href="./styles/main.min.css" type="text/css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Muli:wght@300;500;600;800&display=swap"
+      as="style"
+      rel="preload"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&family=Muli:wght@300;500;600;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
 
     <link
-      rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <title>Bartosz Zagrodzki | Portfolio</title>
   </head>
@@ -90,7 +110,7 @@
       </div>
       <div class="info">
         <div class="info__image" data-aos="fade-down">
-          <img src="./images/front-image.jpg" alt="my photo" />
+          <img src="./images/front-image.webp" alt="my photo" />
         </div>
         <div class="info__description" data-aos="fade-up">
           <h3 class="info__description__title">Cześć!</h3>
@@ -129,7 +149,7 @@
           </div>
         </div>
 
-        <div class="grid swiper-container" data-aos="fade-left">
+        <div class="grid swiper-container" data-aos="fade-right">
           <ul class="grid__technologies swiper-wrapper">
             <li class="grid__technologies__technology swiper-slide">
               <button
@@ -166,7 +186,7 @@
                 class="grid__technologies__technology__btn ts"
                 data-tech="ts"
               >
-                <img src="./images/icons/ts.svg" alt="typescript logo" />
+                <img src="./images/icons/ts.svg" alt="typescript" />
               </button>
             </li>
 
@@ -205,7 +225,7 @@
                 class="grid__technologies__technology__btn next"
                 data-tech="next"
               >
-                <img src="./images/icons/next.svg" alt="next logo" />
+                <img src="./images/icons/next.svg" alt="next" />
               </button>
             </li>
 
@@ -224,10 +244,7 @@
                 class="grid__technologies__technology__btn postgresql"
                 data-tech="postgresql"
               >
-                <img
-                  src="./images/icons/postgresql.svg"
-                  alt="postgresql logo"
-                />
+                <img src="./images/icons/postgresql.svg" alt="postgresql" />
               </button>
             </li>
 
@@ -236,7 +253,7 @@
                 class="grid__technologies__technology__btn mongo"
                 data-tech="mongo"
               >
-                <img src="./images/icons/mongo.svg" alt="mongo logo" />
+                <img src="./images/icons/mongo.svg" alt="mongo" />
               </button>
             </li>
 
@@ -245,7 +262,7 @@
                 class="grid__technologies__technology__btn git"
                 data-tech="git"
               >
-                <img src="./images/icons/git.svg" alt="git logo" />
+                <img src="./images/icons/git.svg" alt="git" />
               </button>
             </li>
           </ul>
@@ -264,26 +281,33 @@
         <article class="project" data-aos="zoom-in">
           <img
             class="project__image"
-            src="./images/projekt1.PNG"
-            alt="weather app"
+            src="./images/projects/finejob.webp"
+            alt="finejob"
           />
           <div class="project__description">
-            <h3 class="project__description__title">Aplikacja pogodowa</h3>
+            <h3 class="project__description__title">Finejob</h3>
             <div class="project__description__technologies">
               Użyte technologie:
               <ul>
-                <li>HTML</li>
-                <li>(S)CSS</li>
-                <li>JS</li>
-                <li>Vue.js (REST API)</li>
+                <li>SCSS</li>
+                <li>TypeScript</li>
+                <li>React (Redux)</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
               </ul>
             </div>
             <div class="project__description__buttons">
-              <a href="https://bartek532.github.io/weather/" target="_blank"
-                ><button>live</button></a
+              <a
+                href="https://finejob.vercel.app"
+                target="_blank"
+                rel="noopener"
+                ><button>demo</button></a
               >
-              <a href="https://github.com/Bartek532/weather" target="_blank"
-                ><button>code</button></a
+              <a
+                href="https://github.com/Bartek532/finejob"
+                target="_blank"
+                rel="noopener"
+                ><button>kod</button></a
               >
             </div>
           </div>
@@ -292,7 +316,37 @@
         <article class="project" data-aos="zoom-in">
           <img
             class="project__image"
-            src="./images/projekt2.PNG"
+            src="./images/projects/book-searcher.webp"
+            alt="book searcher"
+          />
+          <div class="project__description">
+            <h3 class="project__description__title">Book Searcher</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>SCSS</li>
+                <li>TypeScript</li>
+                <li>Vue (Vuex)</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <button>demo</button>
+              <a
+                href="https://github.com/Bartek532/book-searcher-postgres"
+                target="_blank"
+                rel="noopener"
+              >
+                <button>kod</button>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project" data-aos="zoom-in">
+          <img
+            class="project__image"
+            src="./images/projects/recipe.webp"
             alt="recipe app"
           />
           <div class="project__description">
@@ -300,61 +354,25 @@
             <div class="project__description__technologies">
               Użyte technologie:
               <ul>
-                <li>HTML</li>
-                <li>(S)CSS</li>
-                <li>JS</li>
-                <li>Vue.js (REST API)</li>
+                <li>SCSS</li>
+                <li>JavaScript</li>
+                <li>Vue</li>
               </ul>
             </div>
             <div class="project__description__buttons">
-              <button>live</button>
-              <button>code</button>
-            </div>
-          </div>
-        </article>
-        <article class="project" data-aos="zoom-in">
-          <img
-            class="project__image"
-            src="./images/projekt3.PNG"
-            alt="blog app"
-          />
-          <div class="project__description">
-            <h3 class="project__description__title">Blog</h3>
-            <div class="project__description__technologies">
-              Użyte technologie:
-              <ul>
-                <li>HTML</li>
-                <li>(S)CSS</li>
-                <li>JS</li>
-                <li>Vue.js (REST API)</li>
-              </ul>
-            </div>
-            <div class="project__description__buttons">
-              <a href="https://bartek532.github.io/blog/" target="_blank"
-                ><button>live</button></a
+              <a
+                href="https://bartek532.github.io/recipe-app"
+                target="_blank"
+                rel="noopener"
               >
-              <a href="https://github.com/Bartek532/blog" target="_blank"
-                ><button>code</button></a
+                <button>demo</button></a
               >
-            </div>
-          </div>
-        </article>
-        <article class="project" data-aos="zoom-in">
-          <img class="project__image" src="./images/projekt4.PNG" alt="games" />
-          <div class="project__description">
-            <h3 class="project__description__title">Gry</h3>
-            <div class="project__description__technologies">
-              Użyte technologie:
-              <ul>
-                <li>HTML</li>
-                <li>(S)CSS</li>
-                <li>JS (jQuery)</li>
-                <li>Canvas API</li>
-              </ul>
-            </div>
-            <div class="project__description__buttons">
-              <button>live</button>
-              <button>code</button>
+              <a
+                href="https://github.com/Bartek532/recipe-app"
+                target="_blank"
+                rel="noopener"
+                ><button>kod</button></a
+              >
             </div>
           </div>
         </article>
@@ -362,25 +380,31 @@
         <article class="project" data-aos="zoom-in">
           <img
             class="project__image"
-            src="./images/projekt5.PNG"
+            src="./images/projects/animations.webp"
             alt="animations"
           />
           <div class="project__description">
-            <h3 class="project__description__title">Troszkę animacji ;)</h3>
+            <h3 class="project__description__title">Animacje</h3>
             <div class="project__description__technologies">
               Użyte technologie:
               <ul>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>JS (GSAP)</li>
+                <li>JavaScript (GSAP)</li>
               </ul>
             </div>
             <div class="project__description__buttons">
-              <a href="https://bartek532.github.io/animations/" target="_blank"
-                ><button>live</button></a
+              <a
+                href="https://bartek532.github.io/animations/"
+                target="_blank"
+                rel="noopener"
+                ><button>demo</button></a
               >
-              <a href="https://github.com/Bartek532/animations" target="_blank"
-                ><button>code</button></a
+              <a
+                href="https://github.com/Bartek532/animations"
+                target="_blank"
+                rel="noopener"
+                ><button>kod</button></a
               >
             </div>
           </div>
@@ -388,7 +412,41 @@
         <article class="project" data-aos="zoom-in">
           <img
             class="project__image"
-            src="./images/projekt6.PNG"
+            src="./images/projects/weather.webp"
+            alt="weather app"
+          />
+          <div class="project__description">
+            <h3 class="project__description__title">Aplikacja pogodowa</h3>
+            <div class="project__description__technologies">
+              Użyte technologie:
+              <ul>
+                <li>SCSS</li>
+                <li>TypeScript</li>
+                <li>React (Context API)</li>
+                <li>Vue (Vuex)</li>
+              </ul>
+            </div>
+            <div class="project__description__buttons">
+              <a
+                href="https://bartek532.github.io/weather-app"
+                target="_blank"
+                rel="noopener"
+              >
+                <button>demo</button></a
+              >
+              <a
+                href="https://github.com/Bartek532/weather-app"
+                target="_blank"
+                rel="noopener"
+                ><button>kod</button></a
+              >
+            </div>
+          </div>
+        </article>
+        <article class="project" data-aos="zoom-in">
+          <img
+            class="project__image"
+            src="./images/projects/todo.webp"
             alt="todo app"
           />
           <div class="project__description">
@@ -396,19 +454,24 @@
             <div class="project__description__technologies">
               Użyte technologie:
               <ul>
-                <li>HTML</li>
-                <li>(S)CSS</li>
-                <li>JS</li>
-                <li>Vue.js</li>
-                <li>React</li>
+                <li>SCSS</li>
+                <li>TypeScript</li>
+                <li>React (Context API)</li>
+                <li>Vue</li>
               </ul>
             </div>
             <div class="project__description__buttons">
-              <a href="https://bartek532.github.io/todo/" target="_blank"
-                ><button>live</button></a
+              <a
+                href="https://bartek532.github.io/todo/"
+                target="_blank"
+                rel="noopener"
+                ><button>demo</button></a
               >
-              <a href="https://github.com/Bartek532/todo" target="_blank"
-                ><button>code</button></a
+              <a
+                href="https://github.com/Bartek532/todo"
+                target="_blank"
+                rel="noopener"
+                ><button>kod</button></a
               >
             </div>
           </div>

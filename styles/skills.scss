@@ -30,7 +30,7 @@
       width: 85%;
       max-width: 550px;
       background-color: $primary-white;
-      box-shadow: 0 0 17px 0 rgba(#000, 0.4);
+      box-shadow: 0 0 17px 0 rgba($primary-black, 0.4);
       margin: 20px 0;
 
       &__title {
@@ -110,7 +110,7 @@
             }
 
             &.next {
-              background-color: #000;
+              background-color: $primary-black;
             }
 
             &.node {
