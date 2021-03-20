@@ -79,10 +79,10 @@
       @include flex(space-evenly);
 
       &__social {
-        width: 62px;
-        height: 62px;
+        width: 57px;
+        height: 57px;
         border-radius: 12px;
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         @include flex;
         position: relative;
         z-index: 1;
@@ -166,7 +166,7 @@
         margin-top: 40px;
         max-width: 600px;
         &__social {
-          transform: scale(1.35);
+          transform: scale(1.45);
         }
       }
     }

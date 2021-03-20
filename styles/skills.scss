@@ -24,6 +24,7 @@
   .info {
     @include flex;
     flex-flow: column wrap;
+
     &__description {
       padding: 30px;
       border-radius: 16px;
