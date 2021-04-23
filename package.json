@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">\r Portfolio 💼\r </h1>",
+  "description": "My own portfolio.",
   "main": "index.js",
   "devDependencies": {
     "cssnano": "^4.1.10",
