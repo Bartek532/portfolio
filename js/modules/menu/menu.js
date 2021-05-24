@@ -1,5 +1,3 @@
-AOS.init();
-
 const options = {
   root: null,
   rootMargin: "0px",
@@ -12,10 +10,6 @@ const observer = new IntersectionObserver(entries => {
   }
 }, options);
 
-document.querySelectorAll("section").forEach(section => {
-  observer.observe(section);
-});
-
 const underlineMenuItemById = id => {
   const links = document.querySelectorAll(".menu__links__link");
 
@@ -26,4 +20,10 @@ const underlineMenuItemById = id => {
   document
     .querySelector(`a[href="#${id}"]`)
     .classList.add("menu__links__link--active");
+};
+
+export const initMenuObservation = () => {
+  document.querySelectorAll("section").forEach(section => {
+    observer.observe(section);
+  });
 };

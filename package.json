@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Bartek532/portfolio/issues"
   },
-  "homepage": "https://bartek532.github.io/portfolio"
+  "homepage": "https://bartek532.github.io/portfolio",
+  "dependencies": {
+    "regenerator-runtime": "^0.13.7"
+  }
 }

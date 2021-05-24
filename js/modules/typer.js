@@ -4,12 +4,10 @@ const typingSpeed = 130;
 
 const pageTitle = document.querySelector(".home__text__name");
 
-const typer = () => {
+export const runTyper = () => {
   if (i < text.length) {
     pageTitle.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typer, typingSpeed);
+    setTimeout(runTyper, typingSpeed);
   }
 };
-
-typer();
