@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .home {
   background-color: $main-color;
   padding: 250px 30px 200px 30px;

@@ -1,4 +1,4 @@
-export const initSwiper = () => {
+export const initSkillsSwiper = () => {
   return new Swiper(".swiper-container", {
     slidesPerView: 4,
     spaceBetween: 10,

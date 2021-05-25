@@ -8,7 +8,7 @@ export const createHTMLElement = (elementName, classList, options) => {
   if (typeof classList === "string") {
     element.classList.add(classList);
   } else {
-    element.classList = classList;
+    classList.map(className => element.classList.add(className));
   }
 
   if (options) {

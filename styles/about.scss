@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .about {
   padding: 20px 30px 80px 30px;
   @include flex;

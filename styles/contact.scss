@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .contact {
   background: $main-color;
   @include flex;
