@@ -67,6 +67,38 @@ footer {
   }
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: $main-color;
+  @include flex;
+  display: none;
+
+  .loader__spinner {
+    animation: fadeToggle 1.5s infinite;
+    width: 50%;
+    max-width: 250px;
+  }
+}
+
+@keyframes fadeToggle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /*
   Improved screen reader only CSS class
   @author Gaël Poupard

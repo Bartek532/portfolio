@@ -19,19 +19,38 @@ export const createHTMLElement = (elementName, classList, options) => {
 };
 
 export const fetchDataFromCMS = async query => {
-  const response = await fetch("https://graphql.datocms.com/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      Authorization: `Bearer ${CMS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      query,
-    }),
-  });
+  setLoading(true);
+  try {
+    const response = await fetch("https://graphql.datocms.com/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer ${CMS_TOKEN}`,
+      },
+      body: JSON.stringify({
+        query,
+      }),
+    });
 
-  const { data } = await response.json();
+    const { data } = await response.json();
 
-  return data;
+    return data;
+  } catch (e) {
+    alert(e);
+  } finally {
+    setLoading(false);
+  }
+};
+
+export const setLoading = async loading => {
+  const loader = document.querySelector(".loader");
+  if (loading) {
+    loader.style.display = "flex";
+    document.body.classList.add("--stop-scrolling");
+    return;
+  }
+
+  loader.style.display = "none";
+  document.body.classList.remove("--stop-scrolling");
 };

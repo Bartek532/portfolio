@@ -3,17 +3,13 @@ import { createHTMLElement, fetchDataFromCMS } from "../utils";
 export const renderProjectsSection = async () => {
   const projectsWrapper = document.querySelector(".projects");
 
-  try {
-    const query =
-      "{ allProjects (orderBy: [level_DESC]) { name, stack, demoUrl, codeUrl, image {url} } }";
-    const { allProjects } = await fetchDataFromCMS(query);
+  const query =
+    "{ allProjects (orderBy: [level_DESC]) { name, stack, demoUrl, codeUrl, image {url} } }";
+  const { allProjects } = await fetchDataFromCMS(query);
 
-    Object.values(allProjects).forEach(project => {
-      projectsWrapper.appendChild(renderProjectsListItem(project));
-    });
-  } catch (e) {
-    alert(e);
-  }
+  Object.values(allProjects).forEach(project => {
+    projectsWrapper.appendChild(renderProjectsListItem(project));
+  });
 };
 
 const renderProjectsListItem = project => {

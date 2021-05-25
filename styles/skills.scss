@@ -67,7 +67,6 @@
 
           &__btn {
             border: 0 none;
-            font-size: 2rem;
             width: 65px;
             height: 65px;
             border-radius: 12px;
@@ -82,54 +81,6 @@
 
             * {
               pointer-events: none;
-            }
-
-            &.html {
-              background-color: #e44d26;
-            }
-
-            &.css {
-              background-color: #379ad6;
-            }
-
-            &.js {
-              background-color: #f0db4f;
-            }
-
-            &.ts {
-              background-color: #007acc;
-            }
-
-            &.vue {
-              background-color: #3fb984;
-            }
-
-            &.react {
-              background-color: #61dbfb;
-            }
-
-            &.sass {
-              background-color: #ce679a;
-            }
-
-            &.next {
-              background-color: $primary-black;
-            }
-
-            &.node {
-              background-color: #6da75d;
-            }
-
-            &.postgresql {
-              background-color: #035976;
-            }
-
-            &.mongo {
-              background-color: #4db33d;
-            }
-
-            &.git {
-              background-color: #f1502f;
             }
           }
         }
@@ -157,7 +108,6 @@
           &__btn {
             width: 85px;
             height: 85px;
-            font-size: 2.9rem;
 
             img {
               transform: translateX(0) scale(1.25);
