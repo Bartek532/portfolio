@@ -1,11 +1,10 @@
 import { createHTMLElement, fetchDataFromCMS } from "../utils";
-import icons from "../../images/icons/skills/*.svg";
 import { initSkillsSwiper } from "../swiper";
 
 export const renderSkillsSection = async () => {
   const skillsWrapper = document.querySelector(".grid__technologies ");
   const query =
-    "{ allSkills(orderBy: [priority_ASC]) { name, label, description, color } }";
+    "{ allSkills(orderBy: [priority_ASC]) { name, label, description, color, icon { url } } }";
   const { allSkills } = await fetchDataFromCMS(query);
 
   Object.values(allSkills).forEach(skill => {
@@ -31,7 +30,7 @@ const renderSkillsListItem = skill => {
   techBtn.style.backgroundColor = skill.color;
 
   const techIcon = createHTMLElement("img", "icon", {
-    src: icons[skill.label],
+    src: skill.icon.url,
     alt: skill.name,
   });
 
