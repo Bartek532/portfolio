@@ -34,7 +34,7 @@ const renderProjectsListItem = project => {
     "project__description__technologies"
   );
 
-  projectTechnologies.innerText = "Użyte technologie";
+  projectTechnologies.innerText = "Użyte technologie:";
 
   const projectTechnologiesList = document.createElement("ul");
   projectTechnologiesList.innerHTML = project.stack
