@@ -1,0 +1,38 @@
+{
+  "navbar": {
+    "start": "start",
+    "about": "o mnie",
+    "skills": "umiejętności",
+    "projects": "projekty",
+    "contact": "kontakt"
+  },
+  "sections": {
+    "about": {
+      "title": "o mnie",
+      "description": {
+        "title": "Cześć!",
+        "text": "Nazywam się Bartek i już od dłuższego czasu interesuję się tworzeniem stron internetowych. Obecnie jestem uczniem czwartej klasy technikum informatycznego. Ciągle staram się poszerzać swoją wiedzę, poznawać nowe technologie, tworzyć coraz to lepsze aplikacje internetowe. Wykazuję się punktualnością oraz rzetelnością, jeśli chodzi o przygotowanie projektu. Cały czas uczę się, rozwijam, zbieram doświadczenie. Zawsze chcę, by moje aplikacje były jak najlepsze, dlatego nawet jeśli coś działa, ale można to zrobić lepiej, poprawiam to! &#128526; Za każdym razem jestem otwarty na innowacyjne pomysły i rozwiązania, staram się za wszelką cenę sprostać oczekiwaniom klienta. Jeśli masz jakieś pytania lub chcesz po prostu pogadać, <a href='#contact' class='info__description__text__link'>skontaktuj się ze mną!</a>"
+      }
+    },
+    "skills": {
+      "title": "umiejętności",
+      "description": {
+        "title": "moje umiejętności",
+        "text": "Chcesz wiedzieć, co tak naprawdę potrafię? Skorzystaj z menu, wybierając technologię &#128513;"
+      }
+    },
+    "projects": {
+      "title": "projekty",
+      "tip": "Dotknij i zobacz więcej!"
+    },
+    "contact": {
+      "title": "kontakt",
+      "form": {
+        "name": "imię",
+        "email": "email",
+        "message": "wiadomość",
+        "submitBtn": "wyślij"
+      }
+    }
+  }
+}

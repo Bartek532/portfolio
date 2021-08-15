@@ -1,0 +1,38 @@
+{
+  "navbar": {
+    "start": "start",
+    "about": "about me",
+    "skills": "skills",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "sections": {
+    "about": {
+      "title": "about me",
+      "description": {
+        "title": "Hi!",
+        "text": "I'm Bartek and I've been interested in creating websites for quite some time now. I am currently a fourth-year student in a computer science technical school. I'm constantly trying to expand my knowledge, learn new technologies, create better and better web applications. I am punctual and reliable when it comes to project preparation. I am constantly learning, developing, gathering experience. I always want my apps to be the best they can be, so even if something works but can be done better, I improve it! 😎 I am open to innovative ideas and solutions every time, I try to meet the client's expectations at all costs. If you have any questions or just want to chat, <a href='#contact' class='info__description__text__link'>contact me!</a>"
+      }
+    },
+    "skills": {
+      "title": "skills",
+      "description": {
+        "title": "my skills",
+        "text": "Do you want to know what I can really do? Use the menu, choosing the technology &#128513;"
+      }
+    },
+    "projects": {
+      "title": "projects",
+      "tip": "Hover and see more!"
+    },
+    "contact": {
+      "title": "contact",
+      "form": {
+        "name": "name",
+        "email": "email",
+        "message": "message",
+        "submitBtn": "send"
+      }
+    }
+  }
+}

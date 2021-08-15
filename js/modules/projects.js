@@ -1,4 +1,4 @@
-import { createHTMLElement, fetchDataFromCMS } from "../utils";
+import { createHTMLElement, fetchDataFromCMS, getUserLanguage } from "../utils";
 
 export const renderProjectsSection = async () => {
   const projectsWrapper = document.querySelector(".projects");
@@ -13,6 +13,7 @@ export const renderProjectsSection = async () => {
 };
 
 const renderProjectsListItem = project => {
+  const language = getUserLanguage();
   const projectTile = createHTMLElement("article", "project");
   projectTile.dataset.aos = "zoom-in";
 
@@ -34,7 +35,8 @@ const renderProjectsListItem = project => {
     "project__description__technologies"
   );
 
-  projectTechnologies.innerText = "Użyte technologie:";
+  projectTechnologies.innerText =
+    language === "pl" ? "Użyte technologie:" : "Used technologies:";
 
   const projectTechnologiesList = document.createElement("ul");
   projectTechnologiesList.innerHTML = project.stack
@@ -60,7 +62,8 @@ const renderProjectsListItem = project => {
     rel: "noopener",
   });
 
-  projectCodeLink.innerHTML = "<button>kod</button>";
+  projectCodeLink.innerHTML =
+    language === "pl" ? "<button>kod</button>" : "<button>code</button>";
 
   projectBtns.appendChild(projectDemoLink);
   projectBtns.appendChild(projectCodeLink);

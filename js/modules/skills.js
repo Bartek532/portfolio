@@ -1,5 +1,6 @@
 import { createHTMLElement, fetchDataFromCMS } from "../utils";
 import { initSkillsSwiper } from "../swiper";
+import { getUserLanguage } from "../utils";
 
 export const renderSkillsSection = async () => {
   const skillsWrapper = document.querySelector(".grid__technologies ");
@@ -59,5 +60,7 @@ const changeActiveTechnology = (tech, techs) => {
   const activeTech = techs.find(({ label }) => label === tech);
 
   technologyBoxTitle.innerText = activeTech.name;
-  technologyBoxDescription.innerText = activeTech.description;
+
+  technologyBoxDescription.innerText =
+    activeTech.description[getUserLanguage()] || activeTech.description["en"];
 };

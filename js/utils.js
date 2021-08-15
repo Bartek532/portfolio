@@ -54,3 +54,11 @@ export const setLoading = async loading => {
   loader.style.display = "none";
   document.body.classList.remove("--stop-scrolling");
 };
+
+export const getUserLanguage = () => {
+  return (
+    localStorage.getItem("lang") ||
+    window.navigator.userLanguage ||
+    window.navigator.language
+  ).slice(0, 2);
+};

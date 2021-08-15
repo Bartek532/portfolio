@@ -75,14 +75,24 @@
   z-index: -1;
   background-color: $primary-white;
   transition: transform 0.5s;
+  @include flex;
+  flex-flow: column-reverse wrap;
 
   &--active {
     transform: translateX(0);
     transition: transform 0.5s;
   }
 
+  &__language {
+    background-color: transparent;
+    border: 0 none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-top: 10px;
+  }
+
   &__links {
-    height: 100%;
     @include flex;
     flex-flow: column wrap;
     margin: 0;
@@ -132,10 +142,17 @@
       position: static;
       transform: translate(0);
       background-color: transparent;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      &__language {
+        margin-right: 20px;
+        margin-top: 0;
+      }
 
       &__links {
         @include flex(space-around, center);
-        margin: 5px 20px 5px auto;
+        margin: 5px 0 5px auto;
         flex-flow: row nowrap;
 
         &__link {
