@@ -1,10 +1,11 @@
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.6,
+  threshold: 0.3,
 };
 
 const observer = new IntersectionObserver(entries => {
+  console.log(entries);
   if (entries[0].isIntersecting) {
     underlineMenuItemById(entries[0].target.id);
   }
@@ -24,6 +25,7 @@ const underlineMenuItemById = id => {
 
 export const initMenuObservation = () => {
   document.querySelectorAll("section").forEach(section => {
+    console.log(section);
     observer.observe(section);
   });
 };
