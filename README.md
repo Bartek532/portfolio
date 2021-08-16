@@ -6,7 +6,7 @@ Portfolio 💼
 
 ## Project Overview 🎨
 
-This is my own portfolio where I show my work. I'm constantly updating them, although it's difficult because I still create new projects, but I try to keep everything up to date 😁
+This is my own portfolio where I show my work. I'm constantly updating them, although it's difficult because I still create new projects, but I try to keep everything up to date 😁 Available in two languages: Polish 🇵🇱 and English 🇬🇧!
 
 UPDATE: Keeping all the information up to date was very cumbersome as I had to interfere with the code, so I decided to implement fetching content from the [headless CMS](https://en.wikipedia.org/wiki/Headless_content_management_system) 😄
 
