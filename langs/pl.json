@@ -23,13 +23,15 @@
     },
     "projects": {
       "title": "projekty",
-      "tip": "Dotknij i zobacz więcej!"
+      "tip": "Dotknij i zobacz więcej!",
+      "techUsedLabel": "Użyte technologie: ",
+      "code": "kod"
     },
     "contact": {
       "title": "kontakt",
       "form": {
         "name": "imię",
-        "email": "email",
+        "email": "e-mail",
         "message": "wiadomość",
         "submitBtn": "wyślij"
       }

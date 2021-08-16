@@ -4,6 +4,7 @@
   background-color: $main-color;
   @include flex;
   flex-flow: column wrap;
+  min-height: 50vh;
 
   .header {
     margin: 10px auto 50px auto;

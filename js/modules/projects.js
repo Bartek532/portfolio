@@ -2,6 +2,7 @@ import { createHTMLElement, fetchDataFromCMS, getUserLanguage } from "../utils";
 
 export const renderProjectsSection = async () => {
   const projectsWrapper = document.querySelector(".projects");
+  projectsWrapper.innerHTML = "";
 
   const query =
     "{ allProjects (orderBy: [level_DESC]) { name, stack, demoUrl, codeUrl, image {url} } }";
@@ -36,7 +37,7 @@ const renderProjectsListItem = project => {
   );
 
   projectTechnologies.innerText =
-    language === "pl" ? "Użyte technologie:" : "Used technologies:";
+    getUserLanguage() === "pl" ? "Użyte technologie: " : "Used technologies: ";
 
   const projectTechnologiesList = document.createElement("ul");
   projectTechnologiesList.innerHTML = project.stack
@@ -54,7 +55,7 @@ const renderProjectsListItem = project => {
     rel: "noopener",
   });
 
-  projectDemoLink.innerHTML = "<button>demo</button>";
+  projectDemoLink.innerHTML = "<button>live</button>";
 
   const projectCodeLink = createHTMLElement("a", "link", {
     href: project.codeUrl,
