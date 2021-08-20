@@ -26,7 +26,8 @@
     margin-top: -20px;
   }
 
-  .projects {
+  .projects,
+  .contributions {
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0 30px 0;
@@ -34,7 +35,8 @@
     justify-content: center;
     max-width: 1200px;
 
-    .project {
+    .project,
+    .contribution {
       flex: 0 1 auto;
       width: 75vw;
       max-width: 310px;
@@ -62,7 +64,8 @@
         transition: transform 0.4s;
       }
 
-      &:hover .project__description {
+      &:hover .project__description,
+      &:hover .contribution__description {
         opacity: 1;
         transition: opacity 0.3s;
       }
@@ -88,6 +91,13 @@
           padding: 0 10px;
           border-left: 2px solid $primary-white;
           width: 100%;
+        }
+
+        &__text {
+          padding: 0 20px;
+          border-left: 2px solid $primary-white;
+          line-height: 1.3rem;
+          font-size: 0.95rem;
         }
 
         &__technologies {
@@ -137,6 +147,22 @@
           }
         }
       }
+    }
+  }
+
+  .subheader {
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+
+    &::after {
+      @include pseudo(60%, 0, -10%, $main-color, -1);
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin: 0;
     }
   }
 }

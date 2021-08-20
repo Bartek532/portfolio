@@ -1,6 +1,7 @@
 import en from "../../langs/en.json";
 import pl from "../../langs/pl.json";
 import { getUserLanguage } from "../utils";
+import { renderContributionsInProjects } from "./contributions";
 import { renderProjectsSection } from "./projects";
 
 const languages = {
@@ -63,19 +64,6 @@ export const translatePage = async language => {
   document.querySelector("#projects .tip").innerText =
     languages[language].sections.projects.tip;
 
-  const projects = document.querySelectorAll(".project");
-  if (projects) {
-    [...projects].forEach(project => {
-      project.querySelector(
-        ".project__description__technologies"
-      ).firstChild.textContent =
-        languages[language].sections.projects.techUsedLabel;
-
-      project.querySelectorAll("button")[1].textContent =
-        languages[language].sections.projects.code;
-    });
-  }
-
   document.querySelector("#contact .header__title").innerText =
     languages[language].sections.contact.title;
 
@@ -90,6 +78,9 @@ export const translatePage = async language => {
 
   document.querySelector("#contact .info__form__submit").innerText =
     languages[language].sections.contact.form.submitBtn;
+
+  renderProjectsSection();
+  renderContributionsInProjects();
 };
 
 window.addEventListener("onlanguagechange", initTranslatingPage);
