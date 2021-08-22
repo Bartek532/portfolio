@@ -98,6 +98,7 @@
           border-left: 2px solid $primary-white;
           line-height: 1.3rem;
           font-size: 0.95rem;
+          display: none;
         }
 
         &__technologies {
@@ -168,9 +169,14 @@
 }
 
 @media all and (min-width: 360px) {
-  .work .projects .project {
+  .work .projects .project,
+  .work .contributions .contribution {
     &__description {
       &__technologies {
+        display: block;
+      }
+
+      &__text {
         display: block;
       }
     }
