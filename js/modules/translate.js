@@ -90,4 +90,9 @@ const languageChangeSelect = document.querySelector("#language-select");
 languageChangeSelect.addEventListener("change", e => {
   localStorage.setItem("lang", e.target.value);
   initTranslatingPage();
+  window.scrollTo(0, 0);
+  document
+    .querySelector(".nav__hamburger")
+    .classList.toggle("nav__hamburger--active");
+  document.querySelector(".menu").classList.toggle("menu--active");
 });
