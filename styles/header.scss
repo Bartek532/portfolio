@@ -37,6 +37,27 @@
     }
   }
 
+  &__socials {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include flex(flex-start);
+    gap: 1.3rem;
+    margin-top: 10px;
+    margin-left: 25px;
+
+    &__social {
+      font-size: 1.4rem;
+      span {
+        transition: color 0.15s ease-out;
+
+        &:hover {
+          color: $primary-white;
+        }
+      }
+    }
+  }
+
   &__icon {
     font-size: 2.5rem;
     position: absolute;
@@ -83,6 +104,10 @@
       }
     }
 
+    &__socials {
+      margin-left: 70px;
+    }
+
     &__icon {
       font-size: 3.5rem;
       bottom: -20px;
@@ -109,6 +134,15 @@
 
       &__title {
         font-size: 2.7rem;
+      }
+    }
+
+    &__socials {
+      margin-left: 95px;
+      gap: 1.6rem;
+
+      &__social {
+        font-size: 1.8rem;
       }
     }
   }
