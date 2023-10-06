@@ -4,7 +4,7 @@
   "description": "My own portfolio.",
   "main": "index.js",
   "devDependencies": {
-    "cssnano": "^4.1.10",
+    "cssnano": "^6.0.1",
     "sass": "^1.32.8"
   },
   "scripts": {
